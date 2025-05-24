@@ -105,6 +105,10 @@ Feel free to explore my code or reach out via GitHub issues!
 **Google Scholar profile:**  
 https://scholar.google.com/citations?user=KqSFejcAAAAJ&hl=en
 
+## 🏷 Connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kenneth-desmond-7461257/)
+
 *Last updated: 2025-05-23*  
 
 
