@@ -30,9 +30,6 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles, complete
 
 ## 🔭 Current Research & Upcoming Projects
 
-* **Stereo Imaging (DIY < \$100):** Low-cost stereo vision setup for robotic sensing.
-* **SonicNet:** Python library for analytical wave propagation in pipe networks.
-
 ---
 
 ## 📫 Connect
