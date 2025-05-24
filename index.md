@@ -28,7 +28,7 @@ I’m an independent researcher focused on **particle-packing**, **acoustic sens
 ### N-Dimensional Random Close Packing Generator  
 🔗 [GitHub ↗](https://github.com/KD-physics/RCPGenerator)  
 A fast, flexible toolkit (C++, MATLAB, Python) for generating **random close packings**, **dense packings**, and **jammed states** of spheres in 2–N dimensions.  
-| ![Ex1]([Images/example1.png](https://github.com/KD-physics/RCPGenerator/blob/main/Images/example1.png)) | ![Ex2](Images/example2.png) | ![Ex3](Images/example3.png) | ![Ex4](Images/example4.png) |
+| ![Ex1](images/example1.png) | ![Ex2](images/example2.png) | ![Ex3](images/example3.png) | ![Ex4](images/example4.png) |
 |:---------------------------:|:---------------------------:|:---------------------------:|:---------------------------:|
 | Cropped rcp; periodic boundary in x, hard boundary in y, and constrained height to be fixed multiple of largest diameter. | Dense packing confined within circular container                  | Cylindrically confined packing with upper and lower hard boundaries.                   | Spherically confined packing.                  |
 
