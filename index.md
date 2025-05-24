@@ -54,7 +54,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 I’m retired and pursuing independent research in physics and sensing. I’ve published on:
 
-- Particle-size distribution effects in RCP ([PR E 90(2), 022204](https://doi.org/10.1103/PhysRevE.90.022204))  
+- Particle-size distribution effects in RCP  
 - Acoustic-based navigation & sensing (“BatBot”)  
 - Deformable-particle models for soft-matter simulations  
 
