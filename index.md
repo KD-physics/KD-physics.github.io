@@ -37,6 +37,11 @@ A fast, flexible toolkit (C++, MATLAB, Python) for generating **random close pac
 🔗 [GitHub ↗](https://github.com/KD-physics/Squishy-Particle-Simulator)  
 A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes core engine, example scripts, and GIFs showcasing deformation and flow.  
 
+| ![Ex1](images/Gravity.gif) | ![Ex2](images/HexCouette_Soft.gif) | ![Ex3](images/SimpleShearMedium.gif) |
+|:---------------------------:|:---------------------------:|:---------------------------:|
+| Deformable ellipses falling under gravity | Fun couette geometry  | Simple shear                  | 
+
+
 ---
 
 ## About Me
@@ -74,14 +79,14 @@ Feel free to explore my code or reach out via GitHub issues!
 
 | # | Title                                                                                                                                                                                      | Year |
 | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :--: |
-| 8 | **Systems and methods for measuring cluster efficiency using broadband tube waves**<br>*B.D. Wheelock, P.A. Gordon, L. Song, K.W. Desmond, Y. Zhang.* US Pat. 12,130,399                   | 2024 |
-| 7 | **Estimates of flow velocity with controlled spatio-temporal variations in contrast media properties**<br>*K.W. Desmond, G.L. Hunter.* US Pat. 11,573,108                                  | 2023 |
-| 6 | **Method and system for performing wireless ultrasonic communications along tubular members**<br>*T.F. Kinn, X. Yi, S.W. Clawson, M.M. Disko, K.W. Desmond, J.H. Moss.* US Pat. 11,203,927 | 2021 |
-| 5 | **Encoded injection of microbubbles to improve flow velocity measurements using cross-correlation technique**<br>*K.W. Desmond, G.L. Hunter.* Meas. Sci. Technol. 32(8), 085302            | 2021 |
-| 4 | **Estimating flow velocity in pipes by correlating multi-frequency signals**<br>*K.W. Desmond, G.L. Hunter.* US Pat. App. 16/190,734                                                       | 2019 |
-| 3 | **Sensitivity of coda wave interferometry to fluid migration through rock**<br>*K.W. Desmond, J.J. Valenza.* J. Acoust. Soc. Am. 145(2), 1100–1104                                         | 2019 |
-| 2 | **Electrode materials with mixed particle sizes**<br>*Z.C. Tim Holme, K. Desmond, W\.A. Hermann, J. Han.* US Pat. 20,150,357,644                                                           | 2015 |
-| 1 | **Structure, dynamics, and forces of jammed systems** (Dissertation)<br>*K.W. Desmond.* Emory University                                                                                   | 2012 |
+| 7 | **Systems and methods for measuring cluster efficiency using broadband tube waves**<br>*B.D. Wheelock, P.A. Gordon, L. Song, K.W. Desmond, Y. Zhang.* US Pat. 12,130,399                   | 2024 |
+| 6 | **Estimates of flow velocity with controlled spatio-temporal variations in contrast media properties**<br>*K.W. Desmond, G.L. Hunter.* US Pat. 11,573,108                                  | 2023 |
+| 5 | **Method and system for performing wireless ultrasonic communications along tubular members**<br>*T.F. Kinn, X. Yi, S.W. Clawson, M.M. Disko, K.W. Desmond, J.H. Moss.* US Pat. 11,203,927 | 2021 |
+| 4 | **Encoded injection of microbubbles to improve flow velocity measurements using cross-correlation technique**<br>*K.W. Desmond, G.L. Hunter.* Meas. Sci. Technol. 32(8), 085302            | 2021 |
+| 3 | **Estimating flow velocity in pipes by correlating multi-frequency signals**<br>*K.W. Desmond, G.L. Hunter.* US Pat. App. 16/190,734                                                       | 2019 |
+| 2 | **Sensitivity of coda wave interferometry to fluid migration through rock**<br>*K.W. Desmond, J.J. Valenza.* J. Acoust. Soc. Am. 145(2), 1100–1104                                         | 2019 |
+| 1 | **Electrode materials with mixed particle sizes**<br>*Z.C. Tim Holme, K. Desmond, W\.A. Hermann, J. Han.* US Pat. 20,150,357,644                                                           | 2015 |
+                                                                          | 2012 |
 
 ## 🎓 Education
 
