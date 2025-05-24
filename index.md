@@ -40,7 +40,7 @@ A fast, flexible toolkit (C++, MATLAB, Python) for generating **random close pac
 
 
 ### Squishy Particle Simulator  
-🔗 [GitHub ↗]([/](https://kd-physics.github.io/squishy-particles/) 
+🔗 [GitHub ↗](https://kd-physics.github.io/squishy-particles/) 
 A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes core engine, example scripts, and GIFs showcasing deformation and flow.  
 
 | ![Ex1](images/Gravity.gif) | ![Ex2](images/HexCouette_Soft.gif) | ![Ex3](images/SimpleShearMedium.gif) |
