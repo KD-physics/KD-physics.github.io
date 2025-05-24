@@ -92,7 +92,7 @@ Feel free to explore my code or reach out via GitHub issues!
 | 3 | **Estimating flow velocity in pipes by correlating multi-frequency signals**<br>*K.W. Desmond, G.L. Hunter.* US Pat. App. 16/190,734                                                       | 2019 |
 | 2 | **Sensitivity of coda wave interferometry to fluid migration through rock**<br>*K.W. Desmond, J.J. Valenza.* J. Acoust. Soc. Am. 145(2), 1100–1104                                         | 2019 |
 | 1 | **Electrode materials with mixed particle sizes**<br>*Z.C. Tim Holme, K. Desmond, W\.A. Hermann, J. Han.* US Pat. 20,150,357,644                                                           | 2015 |
-                                                                          | 2012 |
+
 
 ## 🎓 Education
 
