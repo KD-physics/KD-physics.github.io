@@ -50,6 +50,10 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
     <img src="images/me.png" alt="Kenneth Desmond" />
     <div class="contact-links">
       <p><strong>Physicist & Researcher</strong></p>
+      <p> Former ExxonMobil Research Scientist </p>
+      <p> Post Doc UCSB </p>
+      <p> PhD Emory University </p>
+      <p> BSc Rochester Institute of Technology </p>
       <a href="https://www.linkedin.com/in/kenneth-desmond-7461257/">🔗 LinkedIn</a>
       <a href="https://scholar.google.com/citations?user=KqSFejcAAAAJ&hl=en">🎓 Google Scholar</a>
     </div>
