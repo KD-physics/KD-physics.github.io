@@ -10,6 +10,7 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
   .hide-site-title { display:none; }
 </style>
 
+<!-- Hide your global site title (adjust selector to your theme) -->
 <script>
   document.querySelector('header > a').classList.add('hide-site-title');
 </script>
@@ -17,8 +18,22 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
 <div class="profile-header">
   <img src="images/me.png" alt="Kenneth Desmond" />
   <div>
+    <h2>👋 Welcome</h2>
+    <p>I’m an independent researcher focused on <strong>particle-packing</strong>, <strong>acoustic sensing</strong>, and <strong>deep learning</strong> for physical systems. Explore my toolkit, dive into my publications, or reach out to collaborate!</p>
+    <hr/>
+    <h2>About Me</h2>
+    <p>I’m retired and pursuing independent research in physics and sensing. I’ve published on:</p>
+    <ul>
+      <li>Particle-size distribution effects in RCP</li>
+      <li>Acoustic-based navigation & sensing (“BatBot”)</li>
+      <li>Deformable-particle models for soft-matter simulations</li>
+    </ul>
+    <p>Feel free to explore my code or reach out via GitHub issues!</p>
+  </div>
 </div>
 
+
+---
 
 ## 👋 Welcome
 
@@ -36,9 +51,7 @@ I’m retired and pursuing independent research in physics and sensing. I’ve p
 
 Feel free to explore my code or reach out via GitHub issues!
 
-<!-- close the wrapper div after your markdown -->
-<div>
-</div>
+---
 
 
 ## Current Research
