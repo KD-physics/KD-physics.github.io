@@ -57,7 +57,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 ## Prior Research
 
-### Wave Propagation in Fracture
+### Wave Propagation in Fractures
 
 Generating monitoring acoustic waves in synthetic fractions. | [Reasearch Overview](KrauklisWaves/) | 🔗 [Link to publication ↗](https://www.sciencedirect.com/science/article/abs/pii/S0045782521004679)
 
