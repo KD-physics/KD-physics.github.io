@@ -79,6 +79,13 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
 
 ---
 
+## Current Code & Repositories Available
+
+🔗 [GitHub ↗](https://github.com/KD-physics/RCPGenerator)  
+
+🔗 [GitHub ↗](https://github.com/KD-physics/Squishy-Particle-Simulator) 
+
+---
 
 ## Current Research
 
