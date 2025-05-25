@@ -117,7 +117,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 ### Wave Propagation in Fractures
 
-Generating monitoring acoustic waves in synthetic fractions. | [Reasearch Overview](KrauklisWaves/) | 🔗 [Link to publication ↗](https://www.sciencedirect.com/science/article/abs/pii/S0045782521004679)
+Generating monitoring acoustic waves in synthetic fractions. | [Research Overview](KrauklisWaves/) | 🔗 [Link to publication ↗](https://www.sciencedirect.com/science/article/abs/pii/S0045782521004679)
 
 <div align="center">
   <img src="KrauklisWaves/images/Setup.JPG" alt="Experimental setup for Krauklis wave measurement" width="300"/>&nbsp;
