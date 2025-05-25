@@ -23,14 +23,19 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
     border-radius: 50%;
   }
   .contact-links {
-    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
+    align-items: flex-start;       /* left-align everything */
+    gap: 0.25rem;                  /* smaller gap between items */
     font-size: 0.9rem;
+    margin-top: 0.25rem;           /* reduce top margin */
+  }
+  .contact-links p {
+    margin: 0;                     /* remove default paragraph margins */
+    line-height: 1.2;              /* tighten line spacing */
   }
   .contact-links a {
+    margin-top: 0.25rem;           /* small space before links */
     text-decoration: none;
     color: #0366d6;
   }
@@ -38,6 +43,7 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
     text-decoration: underline;
   }
 </style>
+
 
 <script>
   // Hide the default site title if needed
@@ -50,10 +56,10 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
     <img src="images/me.png" alt="Kenneth Desmond" />
     <div class="contact-links">
       <p><strong>Physicist & Researcher</strong></p>
-      <p> Former ExxonMobil Research Scientist </p>
-      <p> Post Doc UCSB </p>
-      <p> PhD Emory University </p>
-      <p> BSc Rochester Institute of Technology </p>
+      <p>Former ExxonMobil Research Scientist</p>
+      <p>Post Doc, UCSB</p>
+      <p>PhD, Emory University</p>
+      <p>BSc, Rochester Institute of Technology</p>
       <a href="https://www.linkedin.com/in/kenneth-desmond-7461257/">🔗 LinkedIn</a>
       <a href="https://scholar.google.com/citations?user=KqSFejcAAAAJ&hl=en">🎓 Google Scholar</a>
     </div>
