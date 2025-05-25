@@ -171,7 +171,8 @@ Generating monitoring acoustic waves in synthetic fractions. | [Reasearch Overvi
 | Postdoctoral Fellow | University of California, Santa Barbara | 2012–14 | [Megan J. Valentine](https://valentine.me.ucsb.edu/)                     |
 
 **Google Scholar profile:**  
-https://scholar.google.com/citations?user=KqSFejcAAAAJ&hl=en
+
+🔗 [Google Scholar](https://scholar.google.com/citations?user=KqSFejcAAAAJ&hl=en) 
 
 ## 🏷 Connect
 
