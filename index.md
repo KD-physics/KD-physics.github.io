@@ -31,7 +31,7 @@ I’m an independent researcher focused on **particle-packing**, **acoustic sens
 ## Current Research
 
 ### N-Dimensional Random Close Packing Generator  
-🔗 [GitHub ↗](https://kd-physics.github.io/random-close-packing/)  
+🔗 [GitHub ↗](https://github.com/KD-physics/RCPGenerator)   
 A fast, flexible toolkit (C++, MATLAB, Python) for generating **random close packings**, **dense packings**, and **jammed states** of spheres in 2–N dimensions.  
 
 | ![Ex1](images/example1.png) | ![Ex2](images/example2.png) | ![Ex3](images/example3.png) | ![Ex4](images/example4.png) |
@@ -40,7 +40,7 @@ A fast, flexible toolkit (C++, MATLAB, Python) for generating **random close pac
 
 
 ### Squishy Particle Simulator  
-🔗 [GitHub ↗](https://kd-physics.github.io/squishy-particles/) 
+🔗 [GitHub ↗](https://github.com/KD-physics/Squishy-Particle-Simulator) 
 A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes core engine, example scripts, and GIFs showcasing deformation and flow.  
 
 | ![Ex1](images/Gravity.gif) | ![Ex2](images/HexCouette_Soft.gif) | ![Ex3](images/SimpleShearMedium.gif) |
