@@ -79,24 +79,6 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
 
 ---
 
-## 👋 Welcome
-
-I’m an independent researcher focused on **particle-packing**, **acoustic sensing**, and **deep learning** for physical systems. Explore my toolkit, dive into my publications, or reach out to collaborate!
-
----
-
-## About Me
-
-I’m retired and pursuing independent research in physics and sensing. I’ve published on:
-
-- Particle-size distribution effects in RCP  
-- Acoustic-based navigation & sensing (“BatBot”)  
-- Deformable-particle models for soft-matter simulations  
-
-Feel free to explore my code or reach out via GitHub issues!
-
----
-
 
 ## Current Research
 
