@@ -3,24 +3,44 @@ title: "Kenneth Desmond — Physicist & Researcher"
 description: "Independent researcher Kenneth Desmond—particle‐packing toolkits, acoustic sensing, soft‐matter simulators, and wave‐propagation libraries."
 keywords: ["random close packing","jammed state","particle simulator","acoustic sensing","wave propagation","soft matter","deep learning"]
 ---
-
 <style>
   .profile-header { display:flex; align-items:flex-start; gap:2rem; margin-bottom:2rem; }
   .profile-header img { width:180px; height:180px; object-fit:cover; border-radius:50%; }
-  .hide-site-title { display:none; }
+  .contact-links {
+    margin-top:0.5rem;
+    display:flex;
+    gap:1rem;
+    font-size:0.9rem;
+  }
+  .contact-links a {
+    text-decoration:none;
+    color:#0366d6;
+  }
+  .contact-links a:hover {
+    text-decoration:underline;
+  }
 </style>
 
-<!-- Hide your global site title (adjust selector to your theme) -->
+<!-- Hide your global site title if needed -->
 <script>
-  document.querySelector('header > a').classList.add('hide-site-title');
+  document.querySelector('header > a')?.style.setProperty('display','none');
 </script>
 
 <div class="profile-header">
   <img src="images/me.png" alt="Kenneth Desmond" />
   <div>
     <h2>👋 Welcome</h2>
-    <p>I’m an independent researcher focused on <strong>particle-packing</strong>, <strong>acoustic sensing</strong>, and <strong>deep learning</strong> for physical systems. Explore my toolkit, dive into my publications, or reach out to collaborate!</p>
+    <p>I’m an independent researcher focused on <strong>particle-packing</strong>, <strong>acoustic sensing</strong>, and <strong>deep learning</strong> for physical systems.</p>
+    
+    <!-- Contact links under the photo -->
+    <div class="Info">
+      <p> Physicist & Researcher </p>
+      <a href="https://www.linkedin.com/in/kenneth-desmond-7461257/">🔗 LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=KqSFejcAAAAJ&hl=en">🎓 Google Scholar</a>
+    </div>
+
     <hr/>
+
     <h2>About Me</h2>
     <p>I’m retired and pursuing independent research in physics and sensing. I’ve published on:</p>
     <ul>
@@ -31,7 +51,6 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
     <p>Feel free to explore my code or reach out via GitHub issues!</p>
   </div>
 </div>
-
 
 ---
 
