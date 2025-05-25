@@ -5,57 +5,20 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
 ---
 
 <style>
-  /* Container for pic + intro */
-  .profile-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  .profile-header img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  /* Optional: hide the site‐wide title link */
-  .site-title, /* if it’s an <h1> with class site-title */
-  header > a:first-of-type /* or adjust selector to match your template */ {
-    display: none;
-  }
+  .profile-header { display:flex; align-items:flex-start; gap:2rem; margin-bottom:2rem; }
+  .profile-header img { width:180px; height:180px; object-fit:cover; border-radius:50%; }
+  .hide-site-title { display:none; }
 </style>
+
+<script>
+  document.querySelector('header > a').classList.add('hide-site-title');
+</script>
 
 <div class="profile-header">
   <img src="images/me.png" alt="Kenneth Desmond" />
   <div>
-    ## 👋 Welcome
-
-    I’m an independent researcher focused on **particle-packing**, **acoustic sensing**, and **deep learning** for physical systems. Explore my toolkit, dive into my publications, or reach out to collaborate!
-
-    ---
-
-    ## About Me
-
-    I’m retired and pursuing independent research in physics and sensing. I’ve published on:
-
-    - Particle-size distribution effects in RCP  
-    - Acoustic-based navigation & sensing (“BatBot”)  
-    - Deformable-particle models for soft-matter simulations  
-
-    Feel free to explore my code or reach out via GitHub issues!
-  </div>
 </div>
 
-
-<div align="center">
-  <img 
-    src="images/me.png" 
-    alt="Kenneth Desmond" 
-    style="width:180px; height:180px; object-fit:cover; border-radius:50%; margin-bottom:1rem;"
-  />
-</div>
-
----
 
 ## 👋 Welcome
 
@@ -73,7 +36,9 @@ I’m retired and pursuing independent research in physics and sensing. I’ve p
 
 Feel free to explore my code or reach out via GitHub issues!
 
----
+<!-- close the wrapper div after your markdown -->
+<div>
+</div>
 
 
 ## Current Research
