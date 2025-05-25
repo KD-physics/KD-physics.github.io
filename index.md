@@ -1,5 +1,5 @@
 ---
-title: "Kenneth Desmond — Independent Researcher"
+title: "Kenneth Desmond — Physicist & Researcher"
 description: "Independent researcher Kenneth Desmond—particle‐packing toolkits, acoustic sensing, soft‐matter simulators, and wave‐propagation libraries."
 keywords: ["random close packing","jammed state","particle simulator","acoustic sensing","wave propagation","soft matter","deep learning"]
 ---
@@ -20,13 +20,18 @@ I’m an independent researcher focused on **particle-packing**, **acoustic sens
 
 ---
 
-## 📝 About Me
+## About Me
 
-* Retired researcher with a passion for **numerical simulations** and **robotic sensing**.
-* Published on particle-size effects in RCP, acoustic navigation (“BatBot”), and DPM for soft-matter.
-* Current explorations: **particle packing**, **acoustic wave propagation**, **ML-based physical modeling**.
+I’m retired and pursuing independent research in physics and sensing. I’ve published on:
+
+- Particle-size distribution effects in RCP  
+- Acoustic-based navigation & sensing (“BatBot”)  
+- Deformable-particle models for soft-matter simulations  
+
+Feel free to explore my code or reach out via GitHub issues!
 
 ---
+
 
 ## Current Research
 
@@ -50,15 +55,31 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 ---
 
-## About Me
+## Prior Research
 
-I’m retired and pursuing independent research in physics and sensing. I’ve published on:
+### Wave Propagation in Fracture
 
-- Particle-size distribution effects in RCP  
-- Acoustic-based navigation & sensing (“BatBot”)  
-- Deformable-particle models for soft-matter simulations  
+Over the past decades, volcanic seismology has shown that subsurface fractures act as acoustic resonators: seismic tremors arising from natural or induced excitation contain rich information about the fracture geometry. These resonances are governed by Krauklis (tube) waves propagating within the fluid-filled aperture. In collaboration with [C. Armando Duarte](https://cee.illinois.edu/directory/profile/caduarte) developed an experimental technique and numerical solver to generate and monitor the propagation of Krauklis waves in synthetic fractures.
 
-Feel free to explore my code or reach out via GitHub issues!
+**Summary of our work:**
+
+- **Derived** a closed-form theory for Krauklis-wave speed and attenuation in an idealized planar fracture.  
+- **Implemented** this formulation in a numerical simulator that predicts the frequency response of fractures without empirical fitting.  
+- **Experimentally validated** the model at seismic frequencies on finite-extent fractures, demonstrating near-perfect agreement with no free parameters.  
+- **Extended** the theory to account for finite-size effects, showing that the original scaling laws for infinite fractures hold with minor corrections.
+
+These results provide the first direct experimental confirmation of decades-old Krauklis-wave theory and establish a robust framework for non-invasive fracture characterization in both volcanic and petroleum contexts.
+
+🔗 [Link to publication ↗](https://www.sciencedirect.com/science/article/abs/pii/S0045782521004679)
+
+<div align="center">
+  <img src="KrauklisWaves/images/Setup.JPG" alt="Experimental setup for Krauklis wave measurement" width="300"/>&nbsp;
+  <img src="KrauklisWaves/images/Setup.png" alt="Schematic of fracture resonance experiment" width="300"/>
+</div>
+
+
+
+
 
 ---
 
