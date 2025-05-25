@@ -14,6 +14,6 @@ These results provide the first direct experimental confirmation of decades-old 
 🔗 [Link to publication ↗](https://www.sciencedirect.com/science/article/abs/pii/S0045782521004679)
 
 <div align="center">
-  <img src="KrauklisWaves/images/Setup.JPG" alt="Experimental setup for Krauklis wave measurement" width="300"/>&nbsp;
-  <img src="KrauklisWaves/images/Setup.png" alt="Schematic of fracture resonance experiment" width="300"/>
+  <img src="images/Setup.JPG" alt="Experimental setup for Krauklis wave measurement" width="300"/>&nbsp;
+  <img src="images/Setup.png" alt="Schematic of fracture resonance experiment" width="300"/>
 </div>
