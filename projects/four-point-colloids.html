@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spatial and Temporal Dynamical Heterogeneities Approaching the Binary Colloidal Glass Transition — Kenneth Desmond</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+           line-height: 1.6; color: #24292e; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.5rem; }
+    h2 { margin-top: 2rem; border-bottom: 1px solid #eaecef; padding-bottom: 0.3rem; }
+    .badge { display: inline-block; background: #d73a49; color: white; font-size: 0.75rem;
+             padding: 0.2rem 0.6rem; border-radius: 3px; margin-bottom: 1rem; }
+    .back-link { display: inline-block; margin-bottom: 1.5rem; color: #0366d6; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    .pub-link { color: #0366d6; }
+    figure { margin: 1.5rem 0; text-align: center; }
+    figure img { max-width: 100%; border: 1px solid #eaecef; border-radius: 4px; }
+    figcaption { font-size: 0.875rem; color: #586069; margin-top: 0.5rem; text-align: left; }
+    .fig-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+    .fig-row figure { flex: 1; min-width: 280px; max-width: 420px; margin: 0; }
+    .fig-row figure img { width: 100%; }
+    .hero-img { width: 100%; max-width: 560px; border: 1px solid #eaecef; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<a class="back-link" href="../">← Back to Home</a>
+
+<span class="badge">Colloidal Glass Transition</span>
+
+<h1>Spatial and Temporal Dynamical Heterogeneities Approaching the Binary Colloidal Glass Transition</h1>
+
+<p>
+  As a dense colloidal suspension is concentrated toward the glass transition, particle motion slows
+  dramatically and becomes spatially uneven — some regions of the sample remain mobile while neighboring
+  regions are nearly arrested. Understanding how this <em>dynamical heterogeneity</em> evolves with
+  concentration provides direct experimental insight into the microscopic origins of the glass transition.
+  This work characterized both the spatial and temporal extent of heterogeneous dynamics in a binary
+  colloidal mixture using confocal microscopy and the four-point susceptibility χ₄.
+</p>
+
+<h2>Experimental System</h2>
+<p>
+  The sample consisted of a binary mixture of large and small poly(methyl methacrylate) (PMMA) colloidal
+  spheres suspended in a glycerol/water mixture. The two particle sizes suppress crystallization,
+  providing a model glass-forming liquid. Particle positions were tracked in two dimensions using
+  confocal microscopy over a range of volume fractions φ from 0.42 to 0.59, spanning the approach
+  to the glass transition.
+</p>
+
+<figure>
+  <img src="images/dh_BCM_confocal_image_bps.png" alt="Confocal microscope image of binary colloidal mixture" style="max-width:420px;">
+  <figcaption>Confocal microscope image of the binary colloidal mixture. Large and small PMMA particles
+  are visible; the scale bar represents 10 μm. The bidisperse size distribution suppresses crystallization,
+  allowing the system to be studied deep into the supercooled regime.</figcaption>
+</figure>
+
+<h2>Visualizing Dynamical Heterogeneity</h2>
+<p>
+  Mobile particles — those displacing the most over a fixed time interval — are highlighted in red,
+  while immobile particles appear blue. At lower volume fractions mobile particles are scattered
+  throughout the sample, but as φ increases toward the glass transition, mobile particles form
+  increasingly large, correlated clusters. This spatial clustering is the hallmark of dynamical
+  heterogeneity and signals the emergence of cooperative, glassy dynamics.
+</p>
+
+<div class="fig-row">
+  <figure>
+    <img src="images/dh_frame240162_e.png" alt="Mobile particles at phi=0.53">
+    <figcaption><strong>φ = 0.53:</strong> Mobile particles (red) are sparse and scattered,
+    with little spatial correlation.</figcaption>
+  </figure>
+  <figure>
+    <img src="images/dh_frame19c0028_e.png" alt="Mobile particles at phi=0.59">
+    <figcaption><strong>φ = 0.59:</strong> Near the glass transition, mobile particles cluster
+    into large cooperative regions, while most of the sample is arrested (blue).</figcaption>
+  </figure>
+</div>
+
+<p>
+  The movies below show these mobile-particle clusters evolving in time at the two volume fractions.
+  At the higher concentration the clusters are both larger and longer-lived, reflecting the dramatic
+  slowdown of dynamics near the glass transition.
+</p>
+
+<div class="fig-row">
+  <figure>
+    <img src="images/dh_movie_phi053.gif" alt="Movie of mobile particles at phi=0.53">
+    <figcaption>Time-lapse of mobile-particle positions at φ = 0.53. Mobile particles (colored)
+    appear and disappear rapidly with little spatial persistence.</figcaption>
+  </figure>
+  <figure>
+    <img src="images/dh_movie_phi059.gif" alt="Movie of mobile particles at phi=0.59">
+    <figcaption>Time-lapse of mobile-particle positions at φ = 0.59. Large cooperative clusters
+    persist for extended periods, a direct signature of glassy dynamics.</figcaption>
+  </figure>
+</div>
+
+<h2>Four-Point Susceptibility χ₄</h2>
+<p>
+  The four-point susceptibility χ₄ quantifies fluctuations in the mobile fraction as a function of
+  time lag Δt and displacement threshold ΔL. A particle is labeled mobile if its displacement over
+  Δt exceeds ΔL; χ₄ = N·Var[Q(t)] where Q(t) is the instantaneous mobile fraction and N is the
+  particle count. The peak of χ₄ over the (Δt, ΔL) plane identifies the characteristic time scale
+  and length scale at which cooperative motion is most pronounced.
+</p>
+
+<figure>
+  <img src="images/dh_DefinitionChi4.png" alt="Surface plot of chi4 vs time lag and displacement threshold" style="max-width:540px;">
+  <figcaption>Surface plot of χ₄ as a function of time lag Δt and displacement threshold ΔL for
+  φ = 0.52. The sharp peak identifies the optimal (Δt*, ΔL*) pair for probing dynamical
+  heterogeneity, and the height of the peak measures the magnitude of cooperative motion.</figcaption>
+</figure>
+
+<p>
+  χ₄ was computed separately for large and small particles across all volume fractions. Both species
+  show a pronounced peak that grows and shifts to longer times as φ increases, confirming that
+  cooperative motion becomes larger in spatial extent and slower in temporal scale near the glass
+  transition.
+</p>
+
+<figure>
+  <img src="images/dh_chi4_big_small_vs_phi.png" alt="Chi4 vs time lag for big and small particles at multiple volume fractions" style="max-width:560px;">
+  <figcaption>χ₄ versus time lag Δt for (a) large and (b) small particles at volume fractions
+  φ = 0.42–0.54. Each curve shows a clear peak; the peak height increases and shifts to longer
+  times as φ approaches the glass transition, indicating growing cooperative dynamics.</figcaption>
+</figure>
+
+<h2>Growing Length and Time Scales</h2>
+<p>
+  Extracting the peak value χ₄<sup>max</sup> and the corresponding time τ<sub>max</sub> for each φ
+  reveals how the spatial extent and characteristic time scale of heterogeneous dynamics diverge
+  near the glass transition. Both χ₄<sup>max</sup> and τ<sub>max</sub> increase by an order of
+  magnitude across the concentration range studied, consistent with predictions from mode-coupling
+  theory and the Vogel–Fulcher–Tammann (VFT) scaling used to describe supercooled liquids.
+</p>
+
+<figure>
+  <img src="images/dh_chi4_max_tau_max_vs_phi.png" alt="Peak chi4 and tau_max vs volume fraction" style="max-width:500px;">
+  <figcaption>(a) Peak susceptibility χ₄<sup>max</sup> versus volume fraction φ for all particles,
+  large particles, and small particles (inset: corresponding length scale ξ₄). (b) Time scale
+  τ<sub>max</sub> at which χ₄ peaks, showing the dramatic slowing of cooperative dynamics as the
+  glass transition is approached.</figcaption>
+</figure>
+
+<h2>Related Publication</h2>
+<ul>
+  <li><a class="pub-link" href="https://pubs.rsc.org/en/content/articlelanding/2011/sm/c0sm00756k">
+    <strong>Spatial and temporal dynamical heterogeneities approaching the binary colloidal glass transition</strong><br>
+    T. Narumi, S.V. Franklin, K.W. Desmond, M. Tokuyama, E.R. Weeks.
+    <em>Soft Matter</em> 7(4), 1472–1482 (2011).</a></li>
+</ul>
+
+<hr/>
+<a class="back-link" href="../">← Back to Home</a>
+
+</body>
+</html>

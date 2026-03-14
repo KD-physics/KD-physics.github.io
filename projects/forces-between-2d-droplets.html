@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Forces Between 2D Emulsion Droplets Near Jamming</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#24292e;max-width:860px;margin:0 auto;padding:2rem 1.5rem;line-height:1.6}
+  h1{font-size:1.65rem;font-weight:700;margin:0 0 .4rem}
+  h2{font-size:1.15rem;font-weight:600;margin:2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid #eaecef}
+  .meta{color:#586069;font-size:.9rem;margin-bottom:1.5rem}
+  .badge{display:inline-block;padding:.2rem .55rem;border-radius:2rem;font-size:.75rem;font-weight:600;margin-right:.3rem;background:#dbeafe;color:#1d4ed8}
+  .badge.b2{background:#dcfce7;color:#15803d}
+  a{color:#0366d6;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .back{font-size:.875rem;color:#586069;margin-bottom:1.5rem;display:block}
+  .fig{margin:1.5rem 0;text-align:center}
+  .fig img{max-width:100%;border:1px solid #eaecef;border-radius:4px}
+  .fig-row{display:flex;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;justify-content:center}
+  .fig-row .fig{flex:1;min-width:220px;margin:0}
+  figcaption{font-size:.8rem;color:#586069;margin-top:.4rem;line-height:1.4;text-align:left}
+  .pub-link{display:inline-block;margin-top:1.5rem;padding:.45rem 1rem;border:1px solid #0366d6;border-radius:4px;font-size:.875rem;font-weight:600;color:#0366d6}
+  .pub-link:hover{background:#f1f8ff;text-decoration:none}
+  p{margin:.6rem 0 1rem}
+  .gif-wrap{margin:1.5rem 0;text-align:center}
+  .gif-wrap img{max-width:100%;border:1px solid #eaecef;border-radius:4px}
+  .gif-caption{font-size:.8rem;color:#586069;margin-top:.4rem;line-height:1.4}
+</style>
+</head>
+<body>
+
+<a class="back" href="../">← Back to Home</a>
+
+<span class="badge">Emulsions</span><span class="badge b2">Jamming</span>
+
+<h1>Forces Between Quasi-2D Emulsion Droplets Near Jamming</h1>
+<p class="meta">K. W. Desmond, P. J. Young, D. Chen, E. R. Weeks &nbsp;·&nbsp; <em>Soft Matter</em>, 2013</p>
+
+<p>How do soft, deformable particles transmit forces when they are packed together? This experiment answers that question by creating a model system of oil-in-water emulsion droplets squeezed between two glass slides into a quasi-two-dimensional layer. Because the droplets deform slightly at every contact, their shape encodes the force each neighbor exerts — a bit like reading stress from a squeezed orange. By tracking those deformations across many droplets simultaneously, we measured the complete contact-force network at packing fractions ranging from just above the jamming point all the way to dense, highly compressed states.</p>
+
+<div class="fig">
+  <img src="images/forces-droplet-sample.png" alt="Quasi-2D emulsion droplet sample with force chains overlaid"/>
+  <figcaption>Microscopy image of the quasi-2D emulsion between glass slides. Colored lines indicate the measured force chains — chain-like structures of large inter-droplet forces that bear most of the mechanical load.</figcaption>
+</div>
+
+<h2>Key Findings</h2>
+
+<p>Near the jamming transition, both the average contact number per droplet and the pressure scale as power laws in the excess packing fraction (φ − φ<sub>c</sub>), in quantitative agreement with simulations of frictionless soft disks. This is a striking result because real emulsion droplets are deformable, compressible objects — yet they jam like ideal frictionless particles.</p>
+
+<p>We also mapped out the full statistics of the force-chain network. Force chains — the thread-like pathways of large forces that run through a jammed material — are visually striking but poorly understood. Our measurements confirmed a previously untested theoretical assumption: that the orientations of force-chain segments are statistically uncorrelated with each other. This validates the Brujić–Zhou model, which predicts force-chain statistics from just two physical ingredients — force balance and spatial randomness.</p>
+
+<div class="fig-row">
+  <figure class="fig">
+    <img src="images/forces-chain-image.png" alt="Force chain network visualization"/>
+    <figcaption>The force network across a dense emulsion. Red lines indicate the largest forces; blue the smallest. The spatial randomness of the network orientation is a key result of this study.</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="images/forces-network.png" alt="Statistical force network analysis"/>
+    <figcaption>Full contact-force network extracted from droplet shape analysis. Each line segment connects two droplets in contact; line thickness scales with force magnitude.</figcaption>
+  </figure>
+</div>
+
+<h2>Method</h2>
+
+<p>Droplets are produced by microfluidics to achieve a controlled size distribution, then loaded into a thin (∼100 µm) chamber formed by two parallel microscope slides. Because each droplet is larger than the gap, it flattens into a lens shape — a quasi-2D geometry that allows imaging of the full packing in a single focal plane. From the deformed perimeter of each droplet, we extract the contact forces to within 8% uncertainty — significantly better than prior foam-based experiments and comparable to photoelastic disk studies in granular physics.</p>
+
+<div class="gif-wrap">
+  <img src="images/emulsion-droplet-formation.gif" alt="Microfluidic formation of emulsion droplets" style="max-width:426px"/>
+  <p class="gif-caption">Microfluidic droplet production: oil is pumped through a micropipette centered inside a capillary; the surrounding soap-water flow pinches off droplets of uniform size. This co-flow technique produces the monodisperse or bidisperse droplets used in jamming experiments.</p>
+</div>
+
+<div class="fig-row">
+  <figure class="fig">
+    <img src="images/emulsion-apparatus-1.png" alt="Droplet formation apparatus"/>
+    <figcaption>Co-flow microfluidic apparatus for droplet generation. Oil exits the inner micropipette; surrounding aqueous flow shears it into uniform droplets.</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="images/emulsion-contact-id.jpeg" alt="Contact identification between droplets"/>
+    <figcaption>Identifying contacts between droplets: deformed flat facets at each contact point are detected from the droplet outlines, enabling force extraction across the full network.</figcaption>
+  </figure>
+</div>
+
+<div class="fig">
+  <img src="images/forces-big-image.png" alt="Large-area emulsion image showing many droplets"/>
+  <figcaption>Large-area composite image of the emulsion sample at high packing fraction, showing hundreds of individual droplets with their deformed interfaces used for force extraction.</figcaption>
+</div>
+
+<a class="pub-link" href="https://doi.org/10.1039/C3SM27287G" target="_blank">🔗 Link to publication ↗</a>
+
+</body>
+</html>

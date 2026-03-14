@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ellipsoidal Diffusion Microrheology — Kenneth Desmond</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+           line-height: 1.6; color: #24292e; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.5rem; }
+    h2 { margin-top: 2rem; }
+    .badge { display: inline-block; background: #e36209; color: white; font-size: 0.75rem;
+             padding: 0.2rem 0.6rem; border-radius: 3px; margin-bottom: 1rem; }
+    .back-link { display: inline-block; margin-bottom: 1.5rem; color: #0366d6; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    .pub-link { color: #0366d6; }
+    .img-center { text-align: center; margin: 1.5rem 0; }
+    .img-center img { max-width: 420px; border: 1px solid #eaecef; border-radius: 4px; }
+    .img-row { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin: 1.5rem 0; }
+    .img-row-text { flex: 1; min-width: 220px; }
+    .img-row-media { flex: 0 0 auto; text-align: center; }
+    .img-row-media img { border: 1px solid #eaecef; border-radius: 4px; }
+    .gif-pair { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+    .gif-pair a img { border: 2px solid #eaecef; border-radius: 4px; }
+    .caption { text-align: center; font-style: italic; font-size: 0.88rem; color: #586069; margin-top: 0.4rem; }
+  </style>
+</head>
+<body>
+
+<a class="back-link" href="../">← Back to Home</a>
+
+<span class="badge">Microrheology</span>
+
+<h1>Ellipsoidal Diffusion Microrheology</h1>
+
+<p>
+  Conventional passive microrheology tracks the thermal (Brownian) fluctuations of spherical tracer
+  particles to infer a material's viscoelastic modulus. A key limitation is that the particle radius
+  must be known precisely to extract the modulus. This project extended the technique to
+  <em>ellipsoidal</em> tracers, exploiting particle asymmetry to remove the need for precise size
+  knowledge.
+</p>
+
+<h2>Key Idea</h2>
+<p>
+  An ellipsoid undergoes both translational and rotational Brownian motion. Because these two types
+  of fluctuations depend differently on the particle geometry, measuring both simultaneously provides
+  two independent constraints that together determine the viscoelastic modulus — without needing to
+  know the exact particle dimensions. This makes the technique more robust and applicable to situations
+  where calibrating particle size is difficult.
+</p>
+
+<h2>Experimental Approach</h2>
+
+<div class="img-row">
+  <div class="img-row-text">
+    <p>
+      Ellipsoidal tracer particles were synthesized in the laboratory, then injected into viscoelastic
+      fluids and imaged with three-dimensional confocal microscopy. Custom tracking software was developed
+      to follow both the center-of-mass position and the orientation of each particle over time, yielding
+      translational and rotational mean-square displacements.
+    </p>
+    <p>
+      The animation to the right is a POV-ray rendered cartoon of rod-like particles (modeled after
+      dead bacteria) undergoing 3D Brownian diffusion — illustrating both the translational and
+      rotational degrees of freedom measured in the experiment.
+      <a href="images/3D_rodmovie2.gif">View red/blue 3D version ↗</a>
+    </p>
+  </div>
+  <div class="img-row-media">
+    <a href="images/rods.gif">
+      <img src="images/rod_pic.gif" width="160" alt="POV-ray rendering of rod-like particles diffusing in 3D (click to animate)"/>
+    </a>
+    <p class="caption">Click to view 3D diffusion animation</p>
+  </div>
+</div>
+
+<h2>Observed Ellipsoid Diffusion</h2>
+<p>
+  The two animations below show actual synthesized ellipsoids diffusing in solution, imaged by
+  confocal microscopy (2D projections). Both translational drift and rotational tumbling are
+  visible. Click either thumbnail to view the full-resolution animation.
+</p>
+
+<div class="gif-pair">
+  <div>
+    <a href="images/2DEllipsoidalDiffusion.gif">
+      <img src="images/ellipsoids2.gif" height="120" alt="Synthesized ellipsoids diffusing in solution (sequence 1) — click for full animation"/>
+    </a>
+    <p class="caption">Ellipsoid diffusion — sequence 1<br/>(click to enlarge)</p>
+  </div>
+  <div>
+    <a href="images/2DEllipsoidalDiffusion2.gif">
+      <img src="images/ellipsoids3.gif" height="120" alt="Synthesized ellipsoids diffusing in solution (sequence 2) — click for full animation"/>
+    </a>
+    <p class="caption">Ellipsoid diffusion — sequence 2<br/>(click to enlarge)</p>
+  </div>
+</div>
+
+<p>
+  Understanding the microrheology of the simplest asymmetric particle (the ellipsoid) provides a
+  foundation for eventually eliminating the need to inject foreign tracer particles into complex
+  biological samples — many of which already contain micron-scale asymmetric inclusions.
+</p>
+
+<hr/>
+<a class="back-link" href="../">← Back to Home</a>
+
+</body>
+</html>

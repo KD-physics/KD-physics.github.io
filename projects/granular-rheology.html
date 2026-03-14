@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Characterizing the Rheology of Fluidized Granular Matter</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#24292e;max-width:860px;margin:0 auto;padding:2rem 1.5rem;line-height:1.6}
+  h1{font-size:1.65rem;font-weight:700;margin:0 0 .4rem}
+  h2{font-size:1.15rem;font-weight:600;margin:2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid #eaecef}
+  .meta{color:#586069;font-size:.9rem;margin-bottom:1.5rem}
+  .badge{display:inline-block;padding:.2rem .55rem;border-radius:2rem;font-size:.75rem;font-weight:600;margin-right:.3rem;background:#dcfce7;color:#15803d}
+  a{color:#0366d6;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .back{font-size:.875rem;color:#586069;margin-bottom:1.5rem;display:block}
+  .fig{margin:1.5rem 0;text-align:center}
+  .fig img{max-width:100%;border:1px solid #eaecef;border-radius:4px}
+  .fig-row{display:flex;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;justify-content:center}
+  .fig-row .fig{flex:1;min-width:220px;margin:0}
+  figcaption{font-size:.8rem;color:#586069;margin-top:.4rem;line-height:1.4;text-align:left}
+  .pub-link{display:inline-block;margin-top:1.5rem;padding:.45rem 1rem;border:1px solid #0366d6;border-radius:4px;font-size:.875rem;font-weight:600;color:#0366d6}
+  .pub-link:hover{background:#f1f8ff;text-decoration:none}
+  p{margin:.6rem 0 1rem}
+</style>
+</head>
+<body>
+
+<a class="back" href="../">← Back to Home</a>
+
+<span class="badge">Granular Matter</span>
+
+<h1>Characterizing the Rheology of Fluidized Granular Matter</h1>
+<p class="meta">K. W. Desmond, U. Villa, M. Newey, W. Losert &nbsp;·&nbsp; <em>Physical Review E</em>, 2013</p>
+
+<p>How does a flowing granular material respond when you push it sideways? This question sits at the heart of granular rheology — the study of how dense collections of grains flow under stress. This work introduces a new tabletop geometry for probing the rheological properties of granular matter that is already in a flowing (fluidized) state, moving beyond simple viscosity measurements to characterize the full dynamic response of the material.</p>
+
+<div class="fig">
+  <img src="images/granular-rheology-apparatus.png" alt="Schematic of the rotating drum apparatus with oscillatory secondary forcing"/>
+  <figcaption>Experimental apparatus: a horizontal drum half-filled with glass beads is rotated to fluidize the grains into a steady flowing layer (primary flow). A secondary oscillatory shear is then superimposed by driving the entire drum sinusoidally along its axis. The high-speed camera above tracks both grain motion and drum displacement simultaneously, allowing the phase lag between forcing and response to be extracted precisely.</figcaption>
+</div>
+
+<h2>Experimental Approach</h2>
+
+<p>The setup fluidizes granular matter — glass beads of 1–3 mm diameter — by rotating a horizontal drum about its long axis. The grains form a steady flowing layer along the drum surface, captured at 500 fps by a high-speed camera. On top of this primary flow, a second shear is applied by oscillating the drum along its axis at frequency <em>f</em>. The grains respond to this secondary forcing with a measurable phase lag δφ — the angle by which the grain motion lags behind the drum oscillation. This phase lag encodes the rheological state of the flowing material, analogous to the loss angle in conventional viscoelastic measurements.</p>
+
+<h2>Linear Response and the GDR-Midi Model</h2>
+
+<p>At low forcing frequencies, the phase lag scales linearly with <em>f</em> — a non-Newtonian signature, since a Newtonian fluid would give δφ ∼ √<em>f</em>. This linear scaling is well described by the GDR-Midi model, a continuum framework for dense granular flow that treats the material as a frictional medium with a shear-rate-dependent effective viscosity. Fitting the linear regime yields the effective friction coefficient μ for the flowing layer, providing a direct rheological measurement that matches the expected value from steady-state inclined-plane theory.</p>
+
+<div class="fig-row">
+  <figure class="fig">
+    <img src="images/granular-rheology-phase-lag.png" alt="Phase lag vs oscillation frequency for different particle sizes and rotation rates"/>
+    <figcaption>Phase lag δφ as a function of oscillation frequency <em>f</em> for several particle sizes and rotation rates. The linear scaling at low <em>f</em> — distinct from the √<em>f</em> behavior of a Newtonian fluid — is a hallmark of the granular material's frictional rheology.</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="images/granular-rheology-scaling.png" alt="Dimensionless response curves collapsing to a single master curve"/>
+    <figcaption>Over 800 response curves, spanning wide ranges of particle size, rotation rate, and inclination angle, collapse onto a single master curve when plotted against the dimensionless ratio t<sub>η</sub>/t<sub>f</sub> — the ratio of the material's viscous relaxation time to the forcing period. The GDR-Midi model prediction (solid line) matches the data in the linear regime but underpredicts viscosity at fast forcing.</figcaption>
+  </figure>
+</div>
+
+<h2>Model Breakdown at Fast Forcing</h2>
+
+<p>At higher oscillation frequencies — when the forcing timescale becomes comparable to the material's own viscous relaxation time t<sub>η</sub> — the GDR-Midi model breaks down. The experimental data show a smaller phase lag than predicted, implying the material flows more easily than the model expects. This is attributed to the slow reorientation of force chains and the fabric tensor: granular flows are transiently weak when their principal stress axis changes direction, and the material remains in this weakened state for a time comparable to t<sub>η</sub>. The dimensionless ratio t<sub>η</sub>/t<sub>f</sub> neatly collapses all data onto a single master curve, identifying it as the key parameter governing the onset of model breakdown.</p>
+
+<h2>Binary Particle Mixtures</h2>
+
+<p>Extending the measurements to binary mixtures of 1 mm and 2 mm beads reveals a striking result: even a small fraction of fine particles can dramatically alter the rheology of the flowing layer. After the grains segregate by size (with fine particles migrating to the interior), the mixture response at low forcing resembles that of pure 1 mm beads — far softer than the 2 mm system — suggesting that a small number of fine particles in the flowing surface layer disproportionately control the bulk rheological response.</p>
+
+<div class="fig">
+  <img src="images/granular-rheology-mixtures.png" alt="Phase lag for binary bead mixtures compared to monodisperse systems"/>
+  <figcaption>Response curves for two binary mixtures (75% and 50% 1 mm beads by volume, mixed with 2 mm beads) compared to the pure monodisperse systems. At low frequencies the mixtures behave like pure 1 mm systems, while at higher frequencies the 50% mixture converges toward the 2 mm curve — suggesting frequency-dependent participation of fine particles in the oscillatory flow.</figcaption>
+</div>
+
+<a class="pub-link" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.88.032202" target="_blank">🔗 Link to publication ↗</a>
+
+</body>
+</html>

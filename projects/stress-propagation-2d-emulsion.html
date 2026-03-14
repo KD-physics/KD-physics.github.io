@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Stress Redistribution in Flowing Emulsions</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#24292e;max-width:860px;margin:0 auto;padding:2rem 1.5rem;line-height:1.6}
+  h1{font-size:1.65rem;font-weight:700;margin:0 0 .4rem}
+  h2{font-size:1.15rem;font-weight:600;margin:2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid #eaecef}
+  .meta{color:#586069;font-size:.9rem;margin-bottom:1.5rem}
+  .badge{display:inline-block;padding:.2rem .55rem;border-radius:2rem;font-size:.75rem;font-weight:600;margin-right:.3rem;background:#dbeafe;color:#1d4ed8}
+  .badge.b2{background:#dcfce7;color:#15803d}
+  a{color:#0366d6;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .back{font-size:.875rem;color:#586069;margin-bottom:1.5rem;display:block}
+  .fig{margin:1.5rem 0;text-align:center}
+  .fig img{max-width:100%;border:1px solid #eaecef;border-radius:4px}
+  .fig-row{display:flex;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;justify-content:center}
+  .fig-row .fig{flex:1;min-width:220px;margin:0}
+  figcaption{font-size:.8rem;color:#586069;margin-top:.4rem;line-height:1.4;text-align:left}
+  .pub-link{display:inline-block;margin-top:1.5rem;padding:.45rem 1rem;border:1px solid #0366d6;border-radius:4px;font-size:.875rem;font-weight:600;color:#0366d6}
+  .pub-link:hover{background:#f1f8ff;text-decoration:none}
+  p{margin:.6rem 0 1rem}
+  .gif-caption{font-size:.8rem;color:#586069;margin-top:.4rem;line-height:1.4}
+</style>
+</head>
+<body>
+
+<a class="back" href="../">← Back to Home</a>
+
+<span class="badge">Emulsions</span><span class="badge b2">Soft Matter Flow</span>
+
+<h1>Stress Redistribution in Flowing Dense Emulsions</h1>
+<p class="meta">K. W. Desmond, E. R. Weeks &nbsp;·&nbsp; <em>Physical Review E</em>, 2015</p>
+
+<p>When a dense disordered material flows — whether it's foam, emulsion, or a colloidal glass — it does so through sudden, localized particle rearrangements. Each rearrangement not only moves particles but redistributes the stresses on their neighbors, potentially triggering a cascade of further rearrangements. Despite the central role of this stress redistribution in theoretical models of soft glassy flow, directly measuring it in experiment had never been achieved across a wide range of packing fractions. This work does exactly that.</p>
+
+<div class="fig">
+  <img src="images/t1-stress-relaxation.gif" alt="T1 rearrangement event showing stress redistribution" style="max-width:520px"/>
+  <p class="gif-caption">A T1 rearrangement event: four droplets exchange neighbors in a snap. This microscopy movie captures the event in real time in a flowing quasi-2D emulsion, with the droplet deformations encoding the evolving inter-particle stress field.</p>
+</div>
+
+<div class="fig-row">
+  <figure class="fig">
+    <img src="images/stress-schematic.png" alt="Experimental schematic for stress redistribution study"/>
+    <figcaption>Experimental setup: bidisperse emulsion droplets flow through a corner geometry. The velocity gradient in the corner drives frequent T1 rearrangements, allowing statistical averaging across many events.</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="images/stress-flow-geometry.png" alt="Flow field with force chains"/>
+    <figcaption>Measured velocity field and instantaneous force chain network in the flowing emulsion. Force chains (colored lines) fluctuate as T1 events continuously rewire the contact network.</figcaption>
+  </figure>
+</div>
+
+<h2>The T1 Event — A Local Rearrangement</h2>
+
+<p>The elementary rearrangement in a dense emulsion is a T1 event: four droplets, initially with two pairs touching, snap into a new configuration where the other two pairs become neighbors. These events are sudden (milliseconds) and localized (a few droplet diameters), but their stress footprint extends further. By measuring the force on every droplet before and after each T1 event, we directly quantified how the stress field changes in the surrounding region.</p>
+
+<div class="fig-row">
+  <figure class="fig">
+    <img src="images/stress-t1-event.png" alt="Schematic of T1 event and coordinate system"/>
+    <figcaption>Schematic of a T1 rearrangement. Four droplets exchange neighbors along the converging axis. The coordinate system (r, θ) relative to the event midpoint defines the quadrupolar symmetry of the stress response.</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="images/stress-flow-geometry.png" alt="Flow geometry with force chain overlay"/>
+    <figcaption>The experimental flow geometry: emulsion is pumped through a corner, inducing a velocity gradient and many T1 events. Force chains (colored lines) reveal the instantaneous stress state of the packing.</figcaption>
+  </figure>
+</div>
+
+<h2>A Quadrupolar Stress Pattern</h2>
+
+<p>The stress redistribution following each T1 event is not random — it has a clear quadrupolar structure. Neighboring droplets along the compressing axis of the event tend to experience increased stress, while those along the extending axis are relieved. This pattern, predicted by simulations and soft glassy rheology theory, is here confirmed experimentally for the first time over a wide range of packing fractions (φ = 0.88 to 0.96). Importantly, the redistribution becomes more anisotropic at higher φ, meaning denser emulsions concentrate stress more sharply — which in turn makes cascading rearrangements more directional and correlated.</p>
+
+<h2>Connecting Local Events to Macroscopic Flow</h2>
+
+<p>A key result is that the stress redistribution influences <em>where</em> the next rearrangement will occur — droplets that receive additional stress from a T1 event are more likely to rearrange next. This coupling between local stress changes and subsequent rearrangement probability provides direct quantitative evidence for the non-local constitutive behavior predicted by fluidity models of soft glassy flow. The results bridge the gap between microscopic particle-scale dynamics and macroscopic rheological models, and validate the core assumptions of theories that have been used to describe flow in foams, emulsions, and colloidal glasses.</p>
+
+<div class="fig">
+  <img src="images/force-network-hopper.gif" alt="Evolving force chain network in a flowing dense emulsion" style="max-width:481px"/>
+  <p class="gif-caption">The full force chain network evolving in real time as the dense emulsion flows through the corner geometry. Each colored line segment connects two droplets in contact; line thickness and color indicate force magnitude. T1 events appear as sudden local rewirings of the network, each followed by a ripple of stress redistribution in the surrounding region.</p>
+</div>
+
+<div class="fig">
+  <img src="images/stress-force-chain-evolution.gif" alt="Force chain evolution showing stress redistribution around T1 events" style="max-width:400px"/>
+  <p class="gif-caption">Close-up view of the force chain network evolving around T1 rearrangement events. As each event fires, the local contact forces reorganize — stresses increase along one axis and decrease along the perpendicular axis, producing the characteristic quadrupolar redistribution pattern.</p>
+</div>
+
+<a class="pub-link" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.098302" target="_blank">🔗 Link to publication ↗</a>
+
+</body>
+</html>

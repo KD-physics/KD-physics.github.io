@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dynamics of Mussel Plaque Detachment</title>
+<style>
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#24292e;max-width:860px;margin:0 auto;padding:2rem 1.5rem;line-height:1.6}
+  h1{font-size:1.65rem;font-weight:700;margin:0 0 .4rem}
+  h2{font-size:1.15rem;font-weight:600;margin:2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid #eaecef}
+  .meta{color:#586069;font-size:.9rem;margin-bottom:1.5rem}
+  .badge{display:inline-block;padding:.2rem .55rem;border-radius:2rem;font-size:.75rem;font-weight:600;margin-right:.3rem;background:#fef3c7;color:#92400e}
+  a{color:#0366d6;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .back{font-size:.875rem;color:#586069;margin-bottom:1.5rem;display:block}
+  .fig{margin:1.5rem 0;text-align:center}
+  .fig img{max-width:100%;border:1px solid #eaecef;border-radius:4px}
+  .fig-row{display:flex;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;justify-content:center}
+  .fig-row .fig{flex:1;min-width:220px;margin:0}
+  figcaption{font-size:.8rem;color:#586069;margin-top:.4rem;line-height:1.4;text-align:left}
+  .pub-link{display:inline-block;margin-top:1.5rem;padding:.45rem 1rem;border:1px solid #0366d6;border-radius:4px;font-size:.875rem;font-weight:600;color:#0366d6}
+  .pub-link:hover{background:#f1f8ff;text-decoration:none}
+  p{margin:.6rem 0 1rem}
+  .gif-wrap{margin:1.5rem 0;text-align:center}
+  .gif-wrap img{max-width:100%;border:1px solid #eaecef;border-radius:4px}
+  .gif-caption{font-size:.8rem;color:#586069;margin-top:.4rem;line-height:1.4}
+</style>
+</head>
+<body>
+
+<a class="back" href="../">← Back to Home</a>
+
+<span class="badge">Adhesion</span>
+
+<h1>Dynamics of Mussel Plaque Detachment</h1>
+<p class="meta">K. W. Desmond, N. A. Zacchia, J. H. Waite, M. T. Valentine &nbsp;·&nbsp; <em>Soft Matter</em>, 2015</p>
+
+<p>Mussels cling to rocks and piers in pounding surf, enduring hydrodynamic forces exceeding 10 N — yet their adhesive plaques hold fast. How? Most prior work attributed mussel adhesion to remarkable underwater chemistry: the catechol-rich proteins secreted by the plaque form covalent bonds with almost any wet surface. But chemistry alone cannot explain the full picture. This study shows that the <em>geometry</em> and <em>mechanics</em> of the plaque contribute a 100–1000-fold improvement in bond strength beyond what chemistry alone provides.</p>
+
+<div class="gif-wrap">
+  <img src="images/mussel-experiment.gif" alt="Mussel thread-plaque holdfast being pulled to detachment"/>
+  <p class="gif-caption">A single mussel thread-plaque holdfast being pulled to detachment. The byssal thread is gripped at the top and displaced at a constant rate. The plaque (attached to glass below) undergoes large deformations before the interface fails. Custom fiducial markers on the plaque surface track strain.</p>
+</div>
+
+<h2>The Holdfast Geometry</h2>
+
+<p>Each mussel deploys 25–100 byssal threads, each terminating in an adhesive plaque roughly 1 mm in diameter. The thread meets the plaque near its center at a shallow angle (5°–45°), producing a mushroom-shaped geometry — a design convergently evolved across many organisms that require strong, long-lasting attachment. The plaque is not simply a sticky pad; it is a mechanical structure that shapes how loads are distributed to the interface.</p>
+
+<div class="fig-row">
+  <figure class="fig">
+    <img src="images/mussel-plaque.png" alt="Side view of thread-plaque holdfast under tension"/>
+    <figcaption>Side-view image of a thread-plaque holdfast attached to glass. The thread is under tension; black fiducial markers painted on the plaque cuticle track deformation during loading. Scale bar: 1 mm.</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="images/mussel-load-frame.png" alt="Custom load frame and force-deformation curves"/>
+    <figcaption>Custom tensile testing apparatus with integrated dual-camera imaging. Force is measured at 1 kHz while side-view and bottom-view cameras simultaneously record plaque deformation and debonding progression.</figcaption>
+  </figure>
+</div>
+
+<h2>Plastic Yielding as a Design Feature</h2>
+
+<p>As the plaque is stretched, force rises steeply until a critical strain of ~20%, at which point yielding begins. Rather than failing at this point, the plaque continues to deform plastically, dissipating strain energy that would otherwise drive crack propagation at the interface. In every sample tested, yielding preceded debonding — suggesting that the plaque material is tuned to yield before the interface fails. This one mechanism alone accounts for two orders of magnitude enhancement in bond strength compared to a rigid adhesive of the same contact area.</p>
+
+<h2>Synced Side and Interface Imaging</h2>
+
+<p>To capture the full sequence of detachment, we simultaneously imaged the plaque from the side (to track bulk deformation and strain) and from below through the glass (to watch the debonding front propagate at the plaque–glass interface). The two views, synchronized to the force trace, reveal that debonding initiates at a characteristic location — determined by the local stress concentration — and then propagates progressively rather than catastrophically.</p>
+
+<div class="gif-wrap">
+  <img src="images/mussel-detachment-synced.gif" alt="Synchronized dual-camera movie of mussel plaque detachment"/>
+  <p class="gif-caption">Synchronized dual-camera movie: side view (top) tracks plaque bulk deformation; bottom-up view (bottom) shows the debonding front propagating at the plaque–glass interface. Force is measured continuously throughout.</p>
+</div>
+
+<div class="fig-row">
+  <figure class="fig">
+    <img src="images/mussel-side-view.png" alt="Side view sequence of plaque detachment"/>
+    <figcaption>Side-view image sequence of plaque deformation at increasing strain. The plaque undergoes large plastic deformation before the interface fails completely.</figcaption>
+  </figure>
+  <figure class="fig">
+    <img src="images/mussel-bottom-view.png" alt="Bottom view of debonding interface"/>
+    <figcaption>Bottom-up view of the plaque–glass interface during detachment. The dark circular region is the bonded area; the debonding front is visible as it grows inward.</figcaption>
+  </figure>
+</div>
+
+<h2>Design Principles for Bioinspired Adhesives</h2>
+
+<p>The combined contribution of holdfast shape and plastic yielding provides a 100–1000× improvement over flat adhesive patches of the same chemistry. These results suggest that engineering improved underwater adhesives requires optimizing contact geometry and material compliance alongside molecular chemistry — a principle that appears across many biological attachment systems, from gecko toe pads to barnacle cements. The custom load frame developed for this study allows pull angle, pull rate, and sample geometry to be systematically varied, enabling a comprehensive map of how each design parameter affects adhesive performance.</p>
+
+<a class="pub-link" href="https://doi.org/10.1039/C5SM00069F" target="_blank">🔗 Link to publication ↗</a>
+
+</body>
+</html>
