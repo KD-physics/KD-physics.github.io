@@ -42,6 +42,50 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
   .contact-links a:hover {
     text-decoration: underline;
   }
+
+  /* ── Sticky nav bar ──────────────────────────────────────────── */
+  html { scroll-padding-top: 52px; }
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: #fff;
+    border-bottom: 1px solid #e1e4e8;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 0.4rem;
+    min-height: 42px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+  }
+  .site-nav .nav-name {
+    font-weight: 700;
+    color: #24292e;
+    padding: 0 0.7rem 0 0.2rem;
+    border-right: 1px solid #d0d7de;
+    margin-right: 0.3rem;
+    line-height: 42px;
+    flex-shrink: 0;
+  }
+  .site-nav a {
+    color: #586069;
+    text-decoration: none;
+    padding: 0 0.55rem;
+    line-height: 42px;
+    white-space: nowrap;
+    transition: color 0.15s;
+  }
+  .site-nav a:hover {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  @media (max-width: 580px) {
+    .site-nav .nav-name { display: none; }
+    .site-nav a { padding: 0 0.32rem; font-size: 0.74rem; }
+  }
 </style>
 
 
@@ -49,6 +93,19 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
   // Hide the default site title if needed
   document.querySelector('header > a')?.style.setProperty('display','none');
 </script>
+
+<nav class="site-nav">
+  <span class="nav-name">Kenneth Desmond</span>
+  <a href="#about">About</a>
+  <a href="#code">Code</a>
+  <a href="#research">Research</a>
+  <a href="#prior-research">Prior Work</a>
+  <a href="#publications">Publications</a>
+  <a href="#education">Education</a>
+  <a href="#connect">Connect</a>
+</nav>
+
+<span id="about"></span>
 
 <div class="profile-header">
   <!-- Left column: photo + contact info -->
@@ -83,6 +140,8 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
 
 ---
 
+<span id="code"></span>
+
 ## Current Code & Repositories Available
 
 🔗 [GitHub ↗ Random Close Packing Generator](https://github.com/KD-physics/RCPGenerator) - [Link to Mathworks File Exchange ↗](https://www.mathworks.com/matlabcentral/fileexchange/181165-random-close-packing-generator-in-arbitrary-dimensions) - c++ and matlab code to randomly pack dense polydisperse particles in arbitrary dimensions.
@@ -90,6 +149,8 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
 🔗 [GitHub ↗ Squishy Particle Simulator](https://github.com/KD-physics/Squishy-Particle-Simulator) 
 
 ---
+
+<span id="research"></span>
 
 ## Current Research
 
@@ -112,6 +173,8 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 
 ---
+
+<span id="prior-research"></span>
 
 ## Prior Research
 
@@ -350,26 +413,28 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 ---
 
+<span id="publications"></span>
+
 ## 📚 Publications & Patents
 
 ### Publications
 
 | #  | Title                                                                                                                                                             | Year |
 | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--: |
-| 14 | **Clogging and avalanches** in quasi-2D emulsion hopper flow<br>*X. Hong, K.W. Desmond, D. Chen, E.R. Weeks.* Phys. Rev. E 105(1), 014603                         | 2022 |
-| 13 | **Encoded injection of microbubbles** to improve flow velocity measurements using cross-correlation technique<br>*K.W. Desmond, G.L. Hunter.* Meas. Sci. Technol. 32(8), 085302 | 2021 |
-| 12 | **3D GFEM for wave propagation** in fluid-filled fractures<br>*N. Shauer, K.W. Desmond, P.A. Gordon, F. Liu, C.A. Duarte.* CMAME 386, 114136                      | 2021 |
-| 11 | **Sensitivity of coda wave interferometry** to fluid migration through rock<br>*K.W. Desmond, J.J. Valenza.* J. Acoust. Soc. Am. 145(2), 1100–1104                | 2019 |
-| 10 | **Experimental observation of local rearrangements** in dense quasi-2D emulsion flow<br>*D. Chen, K.W. Desmond, E.R. Weeks.* Phys. Rev. E 91(6), 062306           | 2015 |
-| 9  | **Dynamics of mussel plaque detachment**<br>*K.W. Desmond, N.A. Zacchia, J.H. Waite, M.T. Valentine.* Soft Matter 11(34), 6832–6839                               | 2015 |
-| 8  | **Measurement of stress redistribution** in flowing emulsions<br>*K.W. Desmond, E.R. Weeks.* Phys. Rev. Lett. 115(9), 098302                                      | 2015 |
-| 7  | **Influence of particle size distribution** on random close packing of spheres<br>*K.W. Desmond, E.R. Weeks.* Phys. Rev. E 90(2), 022204                          | 2014 |
-| 6  | **Rheology of fluidized granular matter**<br>*K.W. Desmond, U. Villa, M. Newey, W. Losert.* Phys. Rev. E 88(3), 032205                                            | 2013 |
-| 5  | **Experimental study of forces between quasi-2D emulsion droplets near jamming**<br>*K.W. Desmond, P.J. Young, D. Chen, E.R. Weeks.* Soft Matter 9(12), 3424–3436 | 2013 |
-| 4  | **Stress fluctuations in 2D hopper flow**<br>*D. Chen, K.W. Desmond, E.R. Weeks.* Soft Matter 8(40), 10486–10492                                                  | 2012 |
-| 3  | **Dynamical heterogeneities near colloidal glass transition**<br>*T. Narumi, S.V. Franklin, K.W. Desmond, M. Tokuyama, E.R. Weeks.* Soft Matter 7(4), 1472–1482   | 2011 |
-| 2  | **Random close packing in confined geometries**<br>*K.W. Desmond, E.R. Weeks.* Phys. Rev. E 80(5), 051305                                                         | 2009 |
-| 1  | **Jamming of three-dimensional prolate granular materials**<br>*K. Desmond, S.V. Franklin.* Phys. Rev. E 73(3), 031303                                            | 2006 |
+| 14 | [**Clogging and avalanches in quasi-2D emulsion hopper flow**](https://doi.org/10.1103/PhysRevE.105.014603)<br>*X. Hong, K.W. Desmond, D. Chen, E.R. Weeks.* Phys. Rev. E 105(1), 014603 | 2022 |
+| 13 | [**Encoded injection of microbubbles to improve flow velocity measurements using cross-correlation technique**](https://doi.org/10.1088/1361-6501/abe96b)<br>*K.W. Desmond, G.L. Hunter.* Meas. Sci. Technol. 32(8), 085302 | 2021 |
+| 12 | [**3D generalized finite element method for wave propagation in fluid-filled fractures**](https://doi.org/10.1016/j.cma.2021.114136)<br>*N. Shauer, K.W. Desmond, P.A. Gordon, F. Liu, C.A. Duarte.* CMAME 386, 114136 | 2021 |
+| 11 | [**Sensitivity of coda wave interferometry to fluid migration through rock**](https://doi.org/10.1121/1.5091697)<br>*K.W. Desmond, J.J. Valenza.* J. Acoust. Soc. Am. 145(2), 1100–1104 | 2019 |
+| 10 | [**Experimental observation of local rearrangements in dense quasi-2D emulsion flow**](https://doi.org/10.1103/PhysRevE.91.062306)<br>*D. Chen, K.W. Desmond, E.R. Weeks.* Phys. Rev. E 91(6), 062306 | 2015 |
+| 9  | [**Dynamics of mussel plaque detachment**](https://doi.org/10.1039/C5SM01072A)<br>*K.W. Desmond, N.A. Zacchia, J.H. Waite, M.T. Valentine.* Soft Matter 11(34), 6832–6839 | 2015 |
+| 8  | [**Measurement of stress redistribution in flowing emulsions**](https://doi.org/10.1103/PhysRevLett.115.098302)<br>*K.W. Desmond, E.R. Weeks.* Phys. Rev. Lett. 115(9), 098302 | 2015 |
+| 7  | [**Influence of particle size distribution on random close packing of spheres**](https://doi.org/10.1103/PhysRevE.90.022204)<br>*K.W. Desmond, E.R. Weeks.* Phys. Rev. E 90(2), 022204 | 2014 |
+| 6  | [**Rheology of fluidized granular matter**](https://doi.org/10.1103/PhysRevE.88.032202)<br>*K.W. Desmond, U. Villa, M. Newey, W. Losert.* Phys. Rev. E 88(3), 032202 | 2013 |
+| 5  | [**Experimental study of forces between quasi-2D emulsion droplets near jamming**](https://doi.org/10.1039/C3SM27287G)<br>*K.W. Desmond, P.J. Young, D. Chen, E.R. Weeks.* Soft Matter 9(12), 3424–3436 | 2013 |
+| 4  | [**Stress fluctuations in 2D hopper flow**](https://doi.org/10.1039/C2SM26023A)<br>*D. Chen, K.W. Desmond, E.R. Weeks.* Soft Matter 8(40), 10486–10492 | 2012 |
+| 3  | [**Dynamical heterogeneities near colloidal glass transition**](https://doi.org/10.1039/C0SM00756K)<br>*T. Narumi, S.V. Franklin, K.W. Desmond, M. Tokuyama, E.R. Weeks.* Soft Matter 7(4), 1472–1482 | 2011 |
+| 2  | [**Random close packing in confined geometries**](https://doi.org/10.1103/PhysRevE.80.051305)<br>*K.W. Desmond, E.R. Weeks.* Phys. Rev. E 80(5), 051305 | 2009 |
+| 1  | [**Jamming of three-dimensional prolate granular materials**](https://doi.org/10.1103/PhysRevE.73.031306)<br>*K. Desmond, S.V. Franklin.* Phys. Rev. E 73(3), 031306 | 2006 |
 
 ### Patents
 
@@ -382,6 +447,8 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 | 1 | **Electrode materials with mixed particle sizes**<br>*Z.C. Tim Holme, K. Desmond, W\.A. Hermann, J. Han.* US Pat. 20,150,357,644                                                           | 2015 |
 
 
+<span id="education"></span>
+
 ## 🎓 Education
 
 | Degree              | Institution                             |   Year  | Advisor                                                                  |
@@ -393,6 +460,8 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 **Google Scholar profile:**  
 
 🔗 [Google Scholar](https://scholar.google.com/citations?user=KqSFejcAAAAJ&hl=en) 
+
+<span id="connect"></span>
 
 ## 🏷 Connect
 
