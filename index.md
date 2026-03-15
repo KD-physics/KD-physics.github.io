@@ -218,7 +218,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
   <div class="prt-img"><img src="projects/images/rcpalgorithmmov2.gif" alt="Animation of RCP algorithm evolving"/></div>
   <div class="prt-body">
     <p class="prt-title">Random Close Packing Algorithm</p>
-    <p class="prt-desc">An iterative swell–contract–minimize algorithm generates random close packings of 2D disks and 3D spheres. The animation shows a packing evolving from a random start to a jammed configuration.</p>
+    <p class="prt-desc">An iterative swell–contract–minimize particle packing algorithm generates random close packings of 2D hard disks and 3D hard spheres. The animation shows a packing evolving from a random start to a jammed configuration.</p>
     <a class="prt-link" href="projects/rcp-algorithm.html">Details →</a>
   </div>
 </div>
@@ -236,7 +236,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
   <div class="prt-img"><img src="projects/images/2dRCP.png" alt="2D random close packing of binary disks"/></div>
   <div class="prt-body">
     <p class="prt-title">Influence of Particle Size Distribution on RCP</p>
-    <p class="prt-desc">Large-scale simulations map how size-distribution shape (width, skewness) affects the achievable sphere packing fraction, yielding quantitative scaling laws for polydisperse systems.</p>
+    <p class="prt-desc">Large-scale packing simulations map how size-distribution shape (width, skewness) affects the achievable hard-sphere packing fraction, yielding quantitative scaling laws for polydisperse granular and colloidal systems.</p>
     <a class="prt-link" href="projects/rcp-polydispersity.html">Details →</a>
   </div>
 </div>
@@ -245,7 +245,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
   <div class="prt-img"><img src="projects/images/EllipsoidalPacking.gif" alt="Animation of randomly packed ellipsoids"/></div>
   <div class="prt-body">
     <p class="prt-title">Ellipsoidal Packing</p>
-    <p class="prt-desc">Dense random packings of ellipsoids exceed the ~64% sphere-packing fraction limit. Aspect ratio and polydispersity effects on packing fraction and structure were systematically characterized.</p>
+    <p class="prt-desc">Dense random packings of ellipsoidal particles exceed the ~64% hard-sphere packing fraction limit. Aspect ratio and polydispersity effects on packing fraction and structure were systematically characterized.</p>
     <a class="prt-link" href="projects/ellipsoidal-packing.html">Details →</a>
   </div>
 </div>
