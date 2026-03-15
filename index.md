@@ -144,7 +144,7 @@ keywords: ["random close packing","jammed state","particle simulator","acoustic 
 
 ## Current Code & Repositories Available
 
-🔗 [GitHub ↗ Random Close Packing Generator](https://github.com/KD-physics/RCPGenerator) - [Link to Mathworks File Exchange ↗](https://www.mathworks.com/matlabcentral/fileexchange/181165-random-close-packing-generator-in-arbitrary-dimensions) - c++ and matlab code to randomly pack dense polydisperse particles in arbitrary dimensions.
+🔗 [GitHub ↗ Random Close Packing Generator - Code for densely packing particles](https://github.com/KD-physics/RCPGenerator) - [Link to Mathworks File Exchange ↗](https://www.mathworks.com/matlabcentral/fileexchange/181165-random-close-packing-generator-in-arbitrary-dimensions) - C++ and MATLAB code for generating dense random packings of polydisperse particles in arbitrary dimensions with periodic or hard boundaries. Boundaries may be flat or curved (e.g., spherical), allowing many types of packing geometries. The code can generate packings such as spheres packed in a box, disks packed in a 2D box or circle, and 3D spheres packed in rectangular boxes, spheres, or cylinders. The framework generalizes naturally to higher dimensions and has been tested for sphere packings up to seven dimensions.
 
 🔗 [GitHub ↗ Squishy Particle Simulator](https://github.com/KD-physics/Squishy-Particle-Simulator) 
 
