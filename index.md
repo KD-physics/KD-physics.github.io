@@ -1,7 +1,7 @@
 ---
-title: "Kenneth Desmond — Physicist & Researcher"
-description: "Independent researcher Kenneth Desmond—particle‐packing toolkits, acoustic sensing, soft‐matter simulators, and wave‐propagation libraries."
-keywords: ["random close packing","jammed state","particle simulator","acoustic sensing","wave propagation","soft matter","deep learning"]
+title: "Kenneth Desmond, Ph.D. | Random Close Packing (RCP) & Soft Matter Physics"
+description: "Independent researcher | Research and software by Kenneth Desmond, Ph.D. Featuring rcpgenerator for high-density sphere packing, acoustic sensing, and soft-matter simulation toolkits."
+keywords: ["random close packing", "dense packing", 'python', jammed state","particle simulator","acoustic sensing","wave propagation","soft matter","deep learning"]
 ---
 
 <style>
