@@ -469,7 +469,30 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kenneth-desmond-7461257/)
 
-*Last updated: 2025-05-23*  
+<hr>
+
+<div style="font-size:0.85rem; color:#666; margin-top:2rem">
+<h3>Site Index</h3>
+
+<ul>
+<li><a href="/projects/forces-between-2d-droplets.html">Forces Between Quasi-2D Emulsion Droplets Near Jamming</a></li>
+<li><a href="/projects/stress-propagation-2d-emulsion.html">Stress Redistribution in Flowing Dense Emulsions</a></li>
+<li><a href="/projects/granular-flow.html">Penetration of an Object into Granular Media</a></li>
+<li><a href="/projects/jamming-of-rods.html">Jamming of Three-Dimensional Prolate Granular Materials</a></li>
+<li><a href="/projects/granular-rheology.html">Rheology of Fluidized Granular Matter</a></li>
+<li><a href="/projects/rcp-algorithm.html">Random Close Packing Algorithm</a></li>
+<li><a href="/projects/confined-rcp.html">Random Close Packing in Confined Geometries</a></li>
+<li><a href="/projects/rcp-polydispersity.html">Influence of Particle Size Distribution on RCP</a></li>
+<li><a href="/projects/ellipsoidal-packing.html">Ellipsoidal Packing</a></li>
+<li><a href="/projects/ellipsoidal-diffusion.html">Ellipsoidal Diffusion Microrheology</a></li>
+<li><a href="/projects/four-point-colloids.html">Dynamical Heterogeneities in Colloidal Glass</a></li>
+<li><a href="/KrauklisWaves/">Wave Propagation in Fractures</a></li>
+<li><a href="/projects/mussel-plaque-detachment.html">Dynamics of Mussel Plaque Detachment</a></li>
+</ul>
+
+</div>
+
+*Last updated: 2026-03-17*  
 
 
 
