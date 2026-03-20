@@ -488,6 +488,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <li><a href="/projects/four-point-colloids.html">Dynamical Heterogeneities in Colloidal Glass</a></li>
 <li><a href="/KrauklisWaves/">Wave Propagation in Fractures</a></li>
 <li><a href="/projects/mussel-plaque-detachment.html">Dynamics of Mussel Plaque Detachment</a></li>
+<li><a href="/notes/packing-spheres-python.html">Python Packing Guide</a></li>
 </ul>
 
 </div>
