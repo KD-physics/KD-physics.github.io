@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Densely Packing Spheres in Python — Kenneth Desmond</title>
+  <meta name="description" content="A practical guide to generating random close packings in Python using rcpgenerator, with methodology comparison and dimensional analysis of jammed sphere packings."/>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+           line-height: 1.6; color: #24292e; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1   { border-bottom: 1px solid #eaecef; padding-bottom: 0.5rem; }
+    h2   { margin-top: 2rem; }
+    h3   { margin-top: 1.5rem; }
+    .badge { display: inline-block; color: white; font-size: 0.75rem;
+             padding: 0.2rem 0.6rem; border-radius: 3px; margin: 0 0.2rem 1rem 0; }
+    .badge-python { background: #3572A5; }
+    .badge-rcp    { background: #6f42c1; }
+    .badge-notes  { background: #2188ff; }
+    .back-link { display: inline-block; margin-bottom: 1.5rem; color: #0366d6; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    .pub-link { color: #0366d6; text-decoration: none; }
+    .pub-link:hover { text-decoration: underline; }
+    /* Quick-links bar */
+    .quick-links { background: #f6f8fa; border: 1px solid #eaecef; border-radius: 6px;
+                   padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .quick-links a { color: #0366d6; margin-right: 1.5rem; text-decoration: none; font-weight: 500; }
+    .quick-links a:hover { text-decoration: underline; }
+    /* Code blocks */
+    pre  { background: #f6f8fa; border: 1px solid #eaecef; border-radius: 6px;
+           padding: 1rem 1.2rem; overflow-x: auto; font-size: 0.875rem; line-height: 1.55; }
+    code { font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; }
+    p code, li code { background: #f6f8fa; border: 1px solid #eaecef; border-radius: 3px;
+                      padding: 0.1em 0.4em; font-size: 0.875em; }
+    /* Images */
+    .img-center { text-align: center; margin: 1.5rem 0; }
+    .img-center img { max-width: 480px; width: 100%; border: 1px solid #eaecef; border-radius: 4px; }
+    .img-center p { font-size: 0.85rem; color: #586069; margin-top: 0.4rem; }
+    /* Figure grid */
+    .fig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+                gap: 0.75rem; margin: 1.5rem 0; }
+    .fig-grid figure { margin: 0; text-align: center; }
+    .fig-grid figure img { width: 100%; border: 1px solid #eaecef; border-radius: 4px;
+                           object-fit: cover; aspect-ratio: 1; }
+    .fig-grid figure figcaption { font-size: 0.75rem; color: #586069; margin-top: 0.4rem; line-height: 1.4; }
+    /* Tables */
+    table  { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 1rem 0; }
+    th     { background: #f6f8fa; border: 1px solid #d0d7de; padding: 0.5rem 0.75rem; text-align: left; }
+    td     { border: 1px solid #d0d7de; padding: 0.5rem 0.75rem; vertical-align: top; }
+    tr:nth-child(even) td { background: #f9f9fb; }
+    table a { color: #0366d6; }
+    /* References */
+    .references { font-size: 0.85rem; color: #444; }
+    .references ol li { margin-bottom: 0.6rem; line-height: 1.5; }
+    .references a { color: #0366d6; }
+  </style>
+</head>
+<body>
+
+<a class="back-link" href="../">← Back to Home</a>
+
+<span class="badge badge-python">Python</span>
+<span class="badge badge-rcp">RCP</span>
+<span class="badge badge-notes">Notes</span>
+
+<h1>Densely Packing Spheres in Python &mdash; Random Close Packing (RCP)</h1>
+
+<div class="quick-links">
+  🔗 <a href="https://github.com/KD-physics/RCPGenerator">GitHub Repository</a>
+  🚀 <a href="https://colab.research.google.com/github/KD-physics/RCPGenerator/blob/main/getting_started.ipynb">Run Getting Started Notebook in Colab</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>The Problem of High-Density Packing</h2>
+
+<p>
+  Generating <strong>true Random Close Packing</strong> is fundamentally more complex than simple random
+  placement. At low densities, "place and reject" (Monte Carlo) methods are sufficient. However, as the
+  system approaches the jamming limit (volume fraction &phi;&thinsp;&asymp;&thinsp;0.64 for monodisperse
+  spheres in 3D<sup><a class="pub-link" href="#ref1">[1]</a></sup>), the probability of placing a sphere
+  without overlap drops toward zero. To generate dense packings, the system must <strong>evolve</strong>
+  toward a jammed state using either optimization methods or dynamical simulations.
+</p>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>Implementation with <code>rcpgenerator</code></h2>
+
+<p>
+  <code>rcpgenerator</code> is an open-source Python library for generating dense, jammed packings of
+  non-overlapping spheres. Unlike simple rejection-sampling methods that fail at high volume fractions,
+  this toolkit uses an <strong>optimization-based "inflation" approach</strong> to reach the
+  <strong>Random Close Packing (RCP) limit</strong> (&phi;&thinsp;&asymp;&thinsp;0.64).
+</p>
+<ul>
+  <li><strong>Key Features:</strong> Support for polydisperse size
+    distributions<sup><a class="pub-link" href="#ref5">[5]</a></sup>, custom container geometries
+    (box, cylinder, sphere)<sup><a class="pub-link" href="#ref4">[4]</a></sup>, and higher dimensions
+    (tested up to 7D).</li>
+</ul>
+
+<h3>Quick Start</h3>
+
+<pre><code>from rcpgenerator import Packing
+
+# Initialize 200 spheres in a unit cube
+p = Packing(N=200, Ndim=3, box=[1,1,1])  # See Colab notebook for more examples and settings
+
+# Evolve the system toward a jammed configuration
+final_packing = p.pack()
+
+# Visualize the final packing
+p.show_packing()              # should only take a few seconds to run
+p.show_packing(figsize=(4,4)) # could take tens of seconds</code></pre>
+
+<div class="img-center">
+  <img src="../images/3DExample.png" alt="Example 3D random close packing of spheres in a unit cube generated by rcpgenerator"/>
+  <p><em>Example output: 200 monodisperse spheres packed into a unit cube near the RCP limit (&phi;&thinsp;&asymp;&thinsp;0.64).</em></p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>Examples of Packings</h2>
+
+<div class="fig-grid">
+  <figure>
+    <img src="../images/example1.png" alt="Cropped dense 2D RCP disk packing with periodic boundary in x and hard boundary in y"/>
+    <figcaption>Dense 2D disk packing; periodic boundary in x, hard boundary in y, height fixed to a multiple of the largest diameter.</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/example2.png" alt="Dense 2D disk packing confined within a circular container"/>
+    <figcaption>Dense 2D disk packing confined within a circular container.</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/example3.png" alt="Cylindrically confined 3D sphere packing with upper and lower hard boundaries"/>
+    <figcaption>Cylindrically confined packing of 3D spheres with upper and lower hard boundaries.</figcaption>
+  </figure>
+  <figure>
+    <img src="../images/example4.png" alt="3D hard spheres packed inside a spherical container"/>
+    <figcaption>3D packing of hard spheres confined to a spherical container.</figcaption>
+  </figure>
+</div>
+
+<p>
+  Running the code above produces a <em>jammed</em> configuration — a state in which every particle is
+  in contact with its neighbors and no individual particle can move without displacing others (although
+  there may be a few "rattlers"). For monodisperse spheres in three dimensions, this jammed state is
+  reached near a volume fraction of &phi;&thinsp;&asymp;&thinsp;0.64, known as the Random Close Packing
+  (RCP) limit<sup><a class="pub-link" href="#ref1">[1]</a></sup>. Approaching this limit through naive
+  random placement quickly becomes intractable: as the system densifies, the probability of inserting a
+  new sphere without overlap drops rapidly, and insertion eventually becomes effectively impossible well
+  below the jamming point. Reaching true RCP therefore requires an algorithm that <em>evolves</em> the
+  entire configuration collectively toward the jammed state. Two broad classes of methods have emerged
+  for this, each making different physical assumptions and offering different computational tradeoffs.
+</p>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>Methodology Comparison</h2>
+
+<p>Two common approaches are used in the literature to create such packings.</p>
+
+<h3>1. Optimization-based packing algorithms</h3>
+
+<p>
+  These methods allow particles to slightly overlap during the optimization
+  process<sup><a class="pub-link" href="#ref2">[2]</a></sup>. The idea is:
+</p>
+<ul>
+  <li>Start from a random low-density configuration.</li>
+  <li>Gradually increase particle diameters.</li>
+  <li>Use an optimizer to adjust particle positions to minimize overlaps.</li>
+  <li>Stop when overlaps fall below a small tolerance.</li>
+</ul>
+<p>
+  In well-converged packings, overlaps are typically extremely small (often
+  ~10<sup>&minus;3</sup> of the particle diameter or less). Position updates can follow either
+  physics-inspired force updates or purely mathematical optimization methods.
+</p>
+
+<h3>2. Dynamical hard-sphere simulations</h3>
+
+<p>
+  Another class of algorithms simulates true hard spheres colliding like billiard
+  balls<sup><a class="pub-link" href="#ref3">[3]</a></sup>. In these algorithms:
+</p>
+<ul>
+  <li>A gas of spheres starts at low density with high kinetic energy.</li>
+  <li>Particle diameters are slowly increased.</li>
+  <li>Energy is gradually removed from the system.</li>
+  <li>The system evolves through collisions until particles become jammed.</li>
+</ul>
+<p>
+  These methods follow physically realistic particle dynamics and have been widely used to study
+  hard-sphere systems.
+</p>
+
+<hr/>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>Links to Other Solutions</h2>
+
+<h3>Optimization &amp; Geometric Methods</h3>
+
+<p>
+  These methods primarily use energy minimization, force-biased algorithms, or geometric inflation.
+  They are often highly efficient for reaching static jammed states but may skip the intermediate
+  physics of a settling system.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Functionality</th>
+      <th>Language</th>
+      <th>Specialization</th>
+      <th>Difficulty</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>RCP Gen</strong></td>
+      <td>Fast generator for arbitrary dimensions (ND). MATLAB version of this code.</td>
+      <td>MATLAB</td>
+      <td>Made for RCP</td>
+      <td>Easy</td>
+      <td><a href="https://www.mathworks.com/matlabcentral/fileexchange/181165-random-close-packing-generator-in-arbitrary-dimensions">FileEx</a></td>
+    </tr>
+    <tr>
+      <td><strong>Circle Dist</strong></td>
+      <td>Solves charge distribution problem that creates RCP.</td>
+      <td>MATLAB</td>
+      <td>Made for Packing</td>
+      <td>Easy but slow</td>
+      <td><a href="https://www.mathworks.com/matlabcentral/fileexchange/56601-random-close-packing-rcp-on-arbitrary-distribution-of-circle-sizes">FileEx</a></td>
+    </tr>
+    <tr>
+      <td><strong>Pack-spheres</strong></td>
+      <td>Brute-force/stochastic circle and sphere packing.</td>
+      <td>JavaScript</td>
+      <td>Configurable</td>
+      <td>Easy</td>
+      <td><a href="https://github.com/mattdesl/pack-spheres">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><strong>Pyspherepack</strong></td>
+      <td>Quick-and-dirty gradient-based optimization using Autograd.</td>
+      <td>Python</td>
+      <td>Made for Packing</td>
+      <td>Easy</td>
+      <td><a href="https://github.com/cunni/pyspherepack">GitHub</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Dynamical &amp; Physical Simulation Methods</h3>
+
+<p>
+  These use Molecular Dynamics (MD), Discrete Element Method (DEM), or event-driven simulations.
+  They provide high epistemic stability for studying physical packing kinetics and non-spherical geometries.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Functionality</th>
+      <th>Language</th>
+      <th>Specialization</th>
+      <th>Difficulty</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>VasiliBaranov/PackingGen</strong></td>
+      <td>Comprehensive suite for Lubachevsky–Stillinger, Jodrey–Tory, and Force-Biased algorithms.</td>
+      <td>C++</td>
+      <td>Made for RCP</td>
+      <td>Moderate</td>
+      <td><a href="https://github.com/VasiliBaranov/packing-generation">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><strong>ParticlePack</strong></td>
+      <td>DEM-based shaking/shuffling for spherical and irregular grains.</td>
+      <td>C# / Unity</td>
+      <td>Packing &amp; Beyond Spheres</td>
+      <td>High</td>
+      <td><a href="https://github.com/MosGeo/ParticlePack">GitHub</a></td>
+    </tr>
+    <tr>
+      <td><strong>LAMMPS</strong></td>
+      <td>Massive-scale MD for granular systems and hard spheres.</td>
+      <td>C++ / Python</td>
+      <td>Configurable</td>
+      <td>High</td>
+      <td><a href="https://www.lammps.org/">Website</a></td>
+    </tr>
+    <tr>
+      <td><strong>YADE</strong></td>
+      <td>Open-source DEM simulator for granular and particulate media.</td>
+      <td>C++ / Python</td>
+      <td>Configurable</td>
+      <td>High</td>
+      <td><a href="https://yade-dem.org/doc/yade.pack.html">Website</a></td>
+    </tr>
+    <tr>
+      <td><strong>HOOMD-blue</strong></td>
+      <td>GPU-accelerated MD/HPMC for hard particles and shapes.</td>
+      <td>Python / C++</td>
+      <td>Configurable</td>
+      <td>Moderate</td>
+      <td><a href="https://github.com/glotzerlab/hoomd-blue">GitHub</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>Practical Considerations</h2>
+
+<p>
+  Physics-based updates typically involve an associated step size (typically a time step) that must
+  remain relatively small for numerical stability, and slow dramatically for highly polydisperse packings
+  where the largest-to-smallest particle size ratio is large. Optimization methods, on the other hand,
+  can take larger non-physical steps toward the minimum overlap configuration and tend to be more stable
+  in highly polydisperse cases.
+</p>
+<p>
+  Because of this, optimization approaches often reach dense packings more quickly — allowing one to
+  generate packings of 1000+ particles in seconds to minutes — although the intermediate states do not
+  correspond to a physically realistic trajectory. In practice, structural properties of packings
+  generated by optimization algorithms tend to agree well with physical experiments (packing fraction,
+  structure factor, coordination number, etc.). <code>rcpgenerator</code> uses an optimization-based
+  approach (ADAM optimizer) to separate particles as they grow in size.
+</p>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>Dense Packing Across Dimensions</h2>
+
+<p>
+  The packing fraction at jamming is not a universal constant — it depends strongly on spatial dimension,
+  and in ways that reveal deep geometric structure. In three dimensions, random close packing reaches
+  &phi;&thinsp;&asymp;&thinsp;0.64<sup><a class="pub-link" href="#ref1">[1]</a></sup>, but this figure
+  decreases rapidly with increasing dimension. The underlying reason is a counterintuitive property of
+  high-dimensional geometry: as dimension grows, the volume of a sphere becomes increasingly concentrated
+  in a thin shell near its surface rather than in its interior. Concretely, for a <em>d</em>-dimensional
+  sphere of radius <em>R</em>, a surface shell of thickness &epsilon; contains a fraction
+  1&minus;(1&minus;&epsilon;/<em>R</em>)<sup><em>d</em></sup> of the total volume — a quantity that
+  approaches 1 as <em>d</em>&thinsp;&rarr;&thinsp;&infin; for any fixed &epsilon;/<em>R</em>. Because
+  most of each particle's volume is skin rather than core, particles interact primarily near their
+  surfaces, pore volume expands rapidly, and even fully jammed configurations occupy a diminishing
+  fraction of the total space — with packing fractions roughly halving with each additional dimension
+  for random packings.
+</p>
+<p>
+  Two dimensions is a notable exception in two distinct ways. First, monodisperse disks in 2D do not
+  readily form stable disordered packings — instead, the system tends to crystallize into large hexagonal
+  domains or a mosaic of hexagonal grains, because the geometry strongly favors the ordered hexagonal
+  lattice (&phi;&thinsp;&asymp;&thinsp;0.91)<sup><a class="pub-link" href="#ref6">[6]</a></sup>.
+  Introducing polydispersity (a distribution of particle sizes) is generally necessary to frustrate
+  this ordering and generate a genuinely amorphous 2D packing.
+  Second, 2D packings are topologically unusual in that the pore space is non-percolating: at jamming,
+  there is no continuous pathway through the gaps between particles from one side of the system to the
+  other. This follows from a fundamental constraint of planar topology — if the particle contact network
+  spans the system (as it must at jamming), the complementary pore network cannot simultaneously form a
+  connected path across it. In three and higher dimensions both the solid particle backbone and the pore
+  network can percolate at the same time, and pore connectivity grows with increasing dimensionality as
+  more directional freedom becomes available for pathways to thread through the structure. This
+  transition in pore topology has direct physical consequences for transport phenomena: it underlies why
+  3D granular and colloidal packings support fluid flow and diffusion in ways that dense 2D monolayers
+  do not.
+</p>
+<p>
+  The <code>rcpgenerator</code> package handles these dimensional variations directly, supporting jammed
+  packing generation from two dimensions up through at least seven. This makes it a practical tool for
+  researchers investigating how structural and topological properties of jammed states — packing
+  fraction, coordination number, pore connectivity — evolve across dimensions.
+</p>
+
+<hr/>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2>References</h2>
+
+<div class="references">
+  <ol>
+    <li id="ref1">
+      S. Torquato, F.H. Stillinger. "Jammed hard-particle packings: From Kepler to Bernal and beyond."
+      <em>Rev. Mod. Phys.</em> <strong>82</strong>(3), 2633–2672 (2010).
+      <a href="https://doi.org/10.1103/RevModPhys.82.2633">doi:10.1103/RevModPhys.82.2633</a>
+    </li>
+    <li id="ref2">
+      C.S. O'Hern, L.E. Silbert, A.J. Liu, S.R. Nagel. "Jamming at zero temperature and zero applied
+      stress: The epitome of disorder." <em>Phys. Rev. E</em> <strong>68</strong>(1), 011306 (2003).
+      <a href="https://doi.org/10.1103/PhysRevE.68.011306">doi:10.1103/PhysRevE.68.011306</a>
+    </li>
+    <li id="ref3">
+      B.D. Lubachevsky, F.H. Stillinger. "Geometric properties of random disk packings."
+      <em>J. Stat. Phys.</em> <strong>60</strong>(5–6), 561–583 (1990).
+      <a href="https://doi.org/10.1007/BF01025983">doi:10.1007/BF01025983</a>
+    </li>
+    <li id="ref4">
+      K.W. Desmond, E.R. Weeks. "Random close packing in confined geometries."
+      <em>Phys. Rev. E</em> <strong>80</strong>(5), 051305 (2009).
+      <a href="https://doi.org/10.1103/PhysRevE.80.051305">doi:10.1103/PhysRevE.80.051305</a>
+    </li>
+    <li id="ref5">
+      K.W. Desmond, E.R. Weeks. "Influence of particle size distribution on random close packing of
+      spheres." <em>Phys. Rev. E</em> <strong>90</strong>(2), 022204 (2014).
+      <a href="https://doi.org/10.1103/PhysRevE.90.022204">doi:10.1103/PhysRevE.90.022204</a>
+    </li>
+    <li id="ref6">
+      E.P. Bernard, W. Krauth. "Two-step melting in two dimensions: First-order liquid-hexatic
+      transition." <em>Phys. Rev. Lett.</em> <strong>107</strong>(15), 155704 (2011).
+      <a href="https://doi.org/10.1103/PhysRevLett.107.155704">doi:10.1103/PhysRevLett.107.155704</a>
+    </li>
+  </ol>
+</div>
+
+<hr/>
+<a class="back-link" href="../">← Back to Home</a>
+
+</body>
+</html>
