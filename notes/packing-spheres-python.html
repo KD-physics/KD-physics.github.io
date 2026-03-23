@@ -151,6 +151,71 @@ p.show_packing(figsize=(4,4)) # could take tens of seconds</code></pre>
   for this, each making different physical assumptions and offering different computational tradeoffs.
 </p>
 
+
+<h3>RCPGenerator Features</h2>
+
+<p>
+  <code>rcpgenerator</code> is a Python library for generating dense, jammed packings of hard particles,
+  using an <strong>ADAM optimizer</strong> implemented in C++ with Python bindings to optimize the packing
+  of spheres into confined or unconfined containers. Spheres can be randomly packed into cylindrical
+  containers, spherical containers, circular containers (2D disks), or periodic and hard-wall rectangular
+  boxes. The library supports arbitrary spatial dimensions, with hypersphere packings tested up to 7D,
+  and handles highly polydisperse size distributions with stable convergence for particle size ratios
+  greater than 100 in 2D.
+</p>
+
+<h4>Container Geometries</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Geometry</th>
+      <th>Dimensions</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Box</strong></td>
+      <td>2D, 3D, ND</td>
+      <td>Rectangular container with periodic or hard-wall boundaries</td>
+    </tr>
+    <tr>
+      <td><strong>Cylinder</strong></td>
+      <td>3D</td>
+      <td>Cylindrical confinement for sphere packing</td>
+    </tr>
+    <tr>
+      <td><strong>Circle</strong></td>
+      <td>2D</td>
+      <td>Circular confinement for disk packing</td>
+    </tr>
+    <tr>
+      <td><strong>Sphere</strong></td>
+      <td>3D</td>
+      <td>Spherical container for hard sphere packing</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Key Features</h3>
+
+<ul>
+  <li><strong>ADAM optimizer</strong> — C++ implementation with Python bindings for fast, stable convergence to jammed states</li>
+  <li><strong>Arbitrary dimensions</strong> — 2D disk packings, 3D sphere packings, and hypersphere packings tested up to 7D</li>
+  <li><strong>Polydisperse size distributions</strong> — stable convergence for particle size ratios greater than 100 in 2D</li>
+  <li><strong>Boundary conditions</strong> — periodic or hard-wall, mixable per axis</li>
+  <li><strong>Custom size distributions</strong> — arbitrary or predefined particle size distributions</li>
+  <li><strong>Reproducible packings</strong> — initial configuration seeding via random seed</li>
+</ul>
+
+<h4>Use Cases</h4>
+
+<p>
+  Suitable as both a <strong>sphere packing generator</strong> for computational geometry and as a
+  <strong>particle packing simulation</strong> tool for computational physics and materials science modeling.
+</p>
+  
 <!-- ═══════════════════════════════════════════════════════════ -->
 <h2>Methodology Comparison</h2>
 
