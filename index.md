@@ -475,7 +475,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <h3>Site Index</h3>
 
 <ul>
-<li><a href="/projects/forces-between-2d-droplets.html">Forces Between Quasi-2D Emulsion Droplets Near Jamming</a></li>
+<li><a href="projects/forces-between-2d-droplets.html">Forces Between Quasi-2D Emulsion Droplets Near Jamming</a></li>
 <li><a href="/projects/stress-propagation-2d-emulsion.html">Stress Redistribution in Flowing Dense Emulsions</a></li>
 <li><a href="/projects/granular-flow.html">Penetration of an Object into Granular Media</a></li>
 <li><a href="/projects/jamming-of-rods.html">Jamming of Three-Dimensional Prolate Granular Materials</a></li>
