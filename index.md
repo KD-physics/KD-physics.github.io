@@ -221,20 +221,20 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <div class="prt-grid">
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/forces-chain-image.png" alt="Force chain network in a 2D jammed emulsion"/></div>
+  <div class="prt-img"><img src="/projects/images/forces-chain-image.png" alt="Force chain network in a 2D jammed emulsion"/></div>
   <div class="prt-body">
     <p class="prt-title">Forces Between Quasi-2D Emulsion Droplets Near Jamming</p>
     <p class="prt-desc">Contact forces extracted from droplet shape deformation reveal critical scaling of pressure and coordination number near the jamming transition, confirming the spatial randomness of force chain networks.</p>
-    <a class="prt-link" href="projects/forces-between-2d-droplets.html">Details →</a>
+    <a class="prt-link" href="/projects/forces-between-2d-droplets.html">Details →</a>
   </div>
 </div>
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/force-network-hopper.gif" alt="Evolving force chain network in a flowing dense emulsion"/></div>
+  <div class="prt-img"><img src="/projects/images/force-network-hopper.gif" alt="Evolving force chain network in a flowing dense emulsion"/></div>
   <div class="prt-body">
     <p class="prt-title">Stress Redistribution in Flowing Dense Emulsions</p>
     <p class="prt-desc">T1 rearrangement events in a flowing quasi-2D emulsion redistribute stress in a quadrupolar pattern, directly linking local particle rearrangements to macroscopic soft glassy flow behavior.</p>
-    <a class="prt-link" href="projects/stress-propagation-2d-emulsion.html">Details →</a>
+    <a class="prt-link" href="/projects/stress-propagation-2d-emulsion.html">Details →</a>
   </div>
 </div>
 
@@ -246,29 +246,29 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <div class="prt-grid">
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/FlowField.gif" alt="PIV flow field of granular intrusion"/></div>
+  <div class="prt-img"><img src="/projects/images/FlowField.gif" alt="PIV flow field of granular intrusion"/></div>
   <div class="prt-body">
     <p class="prt-title">Penetration of an Object into Granular Media</p>
     <p class="prt-desc">MRI imaging combined with PIV reveals the 3D velocity field of granular material flowing around a penetrating intruder, making internal flow structure visible for the first time.</p>
-    <a class="prt-link" href="projects/granular-flow.html">Details →</a>
+    <a class="prt-link" href="/projects/granular-flow.html">Details →</a>
   </div>
 </div>
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/nails.jpg" alt="Pile of acrylic rods suspended by entanglement"/></div>
+  <div class="prt-img"><img src="/projects/images/nails.jpg" alt="Pile of acrylic rods suspended by entanglement"/></div>
   <div class="prt-body">
     <p class="prt-title">Jamming of Three-Dimensional Prolate Granular Materials</p>
     <p class="prt-desc">High-aspect-ratio acrylic rods (aspect ratio &gt;35) form self-supporting, wall-free piles through particle entanglement alone, demonstrating a shape-driven jamming transition.</p>
-    <a class="prt-link" href="projects/jamming-of-rods.html">Details →</a>
+    <a class="prt-link" href="/projects/jamming-of-rods.html">Details →</a>
   </div>
 </div>
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/granular-rheology-apparatus.png" alt="Rotating drum apparatus with oscillatory secondary forcing"/></div>
+  <div class="prt-img"><img src="/projects/images/granular-rheology-apparatus.png" alt="Rotating drum apparatus with oscillatory secondary forcing"/></div>
   <div class="prt-body">
     <p class="prt-title">Rheology of Fluidized Granular Matter</p>
     <p class="prt-desc">Secondary oscillatory forcing applied to a rotating drum of fluidized glass beads reveals non-Newtonian rheology that is well described by the GDR-Midi model at low forcing but breaks down when forcing becomes faster than the material's viscous relaxation time.</p>
-    <a class="prt-link" href="projects/granular-rheology.html">Details →</a>
+    <a class="prt-link" href="/projects/granular-rheology.html">Details →</a>
   </div>
 </div>
 
@@ -289,29 +289,29 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 </div>
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/CircleRCP.png" alt="RCP in a circular container showing wall layering"/></div>
+  <div class="prt-img"><img src="/projects/images/CircleRCP.png" alt="RCP in a circular container showing wall layering"/></div>
   <div class="prt-body">
     <p class="prt-title">Random Close Packing in Confined Geometries</p>
     <p class="prt-desc">Hard-wall boundaries alter packing structure near container walls. An extended algorithm generates confined RCPs and quantifies the wall-induced layering effect on local packing fraction.</p>
-    <a class="prt-link" href="projects/confined-rcp.html">Details →</a>
+    <a class="prt-link" href="/projects/confined-rcp.html">Details →</a>
   </div>
 </div>
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/2dRCP.png" alt="2D random close packing of binary disks"/></div>
+  <div class="prt-img"><img src="/projects/images/2dRCP.png" alt="2D random close packing of binary disks"/></div>
   <div class="prt-body">
     <p class="prt-title">Influence of Particle Size Distribution on RCP</p>
     <p class="prt-desc">Large-scale packing simulations map how size-distribution shape (width, skewness) affects the achievable hard-sphere packing fraction, yielding quantitative scaling laws for polydisperse granular and colloidal systems.</p>
-    <a class="prt-link" href="projects/rcp-polydispersity.html">Details →</a>
+    <a class="prt-link" href="/projects/rcp-polydispersity.html">Details →</a>
   </div>
 </div>
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/EllipsoidalPacking.gif" alt="Animation of randomly packed ellipsoids"/></div>
+  <div class="prt-img"><img src="/projects/images/EllipsoidalPacking.gif" alt="Animation of randomly packed ellipsoids"/></div>
   <div class="prt-body">
     <p class="prt-title">Ellipsoidal Packing</p>
     <p class="prt-desc">Dense random packings of ellipsoidal particles exceed the ~64% hard-sphere packing fraction limit. Aspect ratio and polydispersity effects on packing fraction and structure were systematically characterized.</p>
-    <a class="prt-link" href="projects/ellipsoidal-packing.html">Details →</a>
+    <a class="prt-link" href="/projects/ellipsoidal-packing.html">Details →</a>
   </div>
 </div>
 
@@ -323,20 +323,20 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <div class="prt-grid">
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/ellipsoids2.gif" alt="Synthesized ellipsoids diffusing in solution"/></div>
+  <div class="prt-img"><img src="/projects/images/ellipsoids2.gif" alt="Synthesized ellipsoids diffusing in solution"/></div>
   <div class="prt-body">
     <p class="prt-title">Ellipsoidal Diffusion Microrheology</p>
     <p class="prt-desc">Measuring both translational and rotational Brownian fluctuations of ellipsoidal tracers simultaneously determines the viscoelastic modulus without requiring precise knowledge of particle dimensions.</p>
-    <a class="prt-link" href="projects/ellipsoidal-diffusion.html">Details →</a>
+    <a class="prt-link" href="/projects/ellipsoidal-diffusion.html">Details →</a>
   </div>
 </div>
 
 <div class="prt-card">
-  <img class="prt-img" src="projects/images/dh_frame19c0028_e.png" alt="Mobile colloidal particles near glass transition">
+  <img class="prt-img" src="/projects/images/dh_frame19c0028_e.png" alt="Mobile colloidal particles near glass transition">
   <div class="prt-body">
     <p class="prt-title">Spatial and Temporal Dynamical Heterogeneities Approaching the Binary Colloidal Glass Transition</p>
     <p class="prt-desc">Near the colloidal glass transition, mobile particles (red) cluster into large cooperative regions while most of the sample is arrested (blue). The four-point susceptibility &#967;&#8324; quantifies this growing spatial and temporal heterogeneity.</p>
-    <a class="prt-link" href="projects/four-point-colloids.html">Details →</a>
+    <a class="prt-link" href="/projects/four-point-colloids.html">Details →</a>
   </div>
 </div>
 
@@ -348,11 +348,11 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <div class="prt-grid">
 
 <div class="prt-card">
-  <div class="prt-img"><img src="KrauklisWaves/images/Setup.JPG" alt="Experimental setup for Krauklis wave measurement"/></div>
+  <div class="prt-img"><img src="/KrauklisWaves/images/Setup.JPG" alt="Experimental setup for Krauklis wave measurement"/></div>
   <div class="prt-body">
     <p class="prt-title">Wave Propagation in Fractures</p>
     <p class="prt-desc">Generating and monitoring acoustic Krauklis waves in synthetic fractures to probe fracture geometry and fluid content — with applications to geophysical monitoring.</p>
-    <a class="prt-link" href="KrauklisWaves/">Details →</a>
+    <a class="prt-link" href="/KrauklisWaves/">Details →</a>
   </div>
 </div>
 
@@ -364,11 +364,11 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <div class="prt-grid">
 
 <div class="prt-card">
-  <div class="prt-img"><img src="projects/images/mussel-experiment.gif" alt="Mussel plaque being pulled to detachment"/></div>
+  <div class="prt-img"><img src="/projects/images/mussel-experiment.gif" alt="Mussel plaque being pulled to detachment"/></div>
   <div class="prt-body">
     <p class="prt-title">Dynamics of Mussel Plaque Detachment</p>
     <p class="prt-desc">Plastic yielding of the mussel plaque and mushroom-shaped holdfast geometry together provide a 100–1000× enhancement in bond strength over chemistry alone, revealed by a custom dual-imaging load frame.</p>
-    <a class="prt-link" href="projects/mussel-plaque-detachment.html">Details →</a>
+    <a class="prt-link" href="/projects/mussel-plaque-detachment.html">Details →</a>
   </div>
 </div>
 
