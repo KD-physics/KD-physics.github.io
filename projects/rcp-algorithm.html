@@ -63,10 +63,103 @@
   confined geometries (see <a href="confined-rcp.html">Confined RCP</a>).
 </p>
 
-<p style="font-size:0.85rem; color:#586069;">
-  <sup>1</sup> N. Xu, J. Blawzdziewicz, and C.S. O'Hern, <em>Phys. Rev. E</em> 71, 061306 (2005).
-</p>
+  <div style="font-size:0.85rem; color:#586069;">
+    <p>
+      <sup>1</sup>
+      K. Desmond,
+      “Random close packing at extreme size ratios with an Adam-based inflation protocol,”
+      <em>arXiv</em>:2608.12235 (2026).
+      <a href="https://arxiv.org/abs/2608.12235"
+         target="_blank"
+         rel="noopener noreferrer">View paper</a>.
+    </p>
 
+    <p>
+      <sup>2</sup>
+      K. W. Desmond and E. R. Weeks,
+      “Random close packing of disks and spheres in confined geometries,”
+      <em>Physical Review E</em> <strong>80</strong>, 051305 (2009).
+      <a href="https://arxiv.org/abs/0903.0864"
+         target="_blank"
+         rel="noopener noreferrer">View paper</a>.
+    </p>
+
+    <p>
+      <sup>3</sup>
+      N. Xu, J. Blawzdziewicz, and C.S. O'Hern,
+      “Influence of particle size distribution on random close packing of spheres,”
+      <em>Physical Review E</em> <strong>71</strong>, 061306 (2005).
+      <a href="https://arxiv.org/abs/1303.4627"
+         target="_blank"
+         rel="noopener noreferrer">View paper</a>.
+    </p>
+  </div>
+  
+  <section id="interactive-packing-app">
+    <h2>Interactive packing app</h2>
+
+    <p>
+      <a
+        href="https://kd-physics.github.io/RCPGenerator/webapp/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🧪 Open the interactive packing app
+      </a>
+    </p>
+
+    <figure>
+      <a
+        href="https://kd-physics.github.io/RCPGenerator/webapp/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="Images/WebApp.png"
+          alt="RCPGenerator interactive 2D packing app"
+          loading="lazy"
+        >
+      </a>
+      <figcaption>
+        Explore how the pressure like μ term and ADAM learning rate
+        affect a two-dimensional particle packing.
+      </figcaption>
+    </figure>
+
+    <p>
+      The hosted app is an interactive 2D demonstration of the a newer packing process (citation below).
+      Choose the number of particles, initial packing fraction, and diameter
+      distribution; generate an initial periodic packing; and then run or stop
+      the ADAM-based relaxation directly in the browser.
+    </p>
+
+    <p>
+      While the packing runs, the μ and learning-rate sliders can be adjusted in
+      real time. This makes it possible to explore how the particle-growth
+      control and optimization step size affect overlaps, energy, packing
+      fraction, and the evolution of the configuration. The resulting particle
+      positions and diameters can be downloaded as a CSV file.
+    </p>
+
+    <p>
+      The app is intended for interactive exploration and education. It is a
+      browser-based 2D implementation and is separate from the maintained
+      <code>rcpgenerator</code> Python package and its compiled numerical engine.
+    </p>
+
+  <div style="font-size:0.85rem; color:#586069;">
+    <p>
+      <sup>4</sup>
+      K. Desmond,
+      “Random close packing at extreme size ratios with an Adam-based inflation protocol,”
+      <em>arXiv</em>:2608.12235 (2026).
+      <a href="https://arxiv.org/abs/2608.12235"
+         target="_blank"
+         rel="noopener noreferrer">View paper</a>.
+    </p>
+  </div>    
+  </section>
+  
 <hr/>
 <a class="back-link" href="../">← Back to Home</a>
 
