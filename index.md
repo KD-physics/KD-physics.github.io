@@ -423,6 +423,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 | #  | Title                                                                                                                                                             | Year |
 | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--: |
+| 15 | [**Random close packing at extreme size ratios with an Adam-based inflation protocol**](https://arxiv.org/abs/2608.12235)<br>*K.W. Desmond* arXiv, 2608.12235 | 2026 |
 | 14 | [**Clogging and avalanches in quasi-2D emulsion hopper flow**](https://doi.org/10.1103/PhysRevE.105.014603)<br>*X. Hong, K.W. Desmond, D. Chen, E.R. Weeks.* Phys. Rev. E 105(1), 014603 | 2022 |
 | 13 | [**Encoded injection of microbubbles to improve flow velocity measurements using cross-correlation technique**](https://doi.org/10.1088/1361-6501/abe96b)<br>*K.W. Desmond, G.L. Hunter.* Meas. Sci. Technol. 32(8), 085302 | 2021 |
 | 12 | [**3D generalized finite element method for wave propagation in fluid-filled fractures**](https://doi.org/10.1016/j.cma.2021.114136)<br>*N. Shauer, K.W. Desmond, P.A. Gordon, F. Liu, C.A. Duarte.* CMAME 386, 114136 | 2021 |
