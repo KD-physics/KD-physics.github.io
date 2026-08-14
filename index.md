@@ -280,6 +280,15 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <div class="prt-grid">
 
 <div class="prt-card">
+  <div class="prt-img"><img src="/projects/images/3D_PowerLaw_p3.63_S100_web.jpg" alt="Slice through a 3D random close packing with a power-law size distribution spanning a size ratio of 100"/></div>
+  <div class="prt-body">
+    <p class="prt-title">Random Close Packing at Extreme Size Ratios</p>
+    <p class="prt-desc">Replacing the single global step of conventional inflation protocols with the Adam optimizer gives every particle coordinate its own adaptive step, so the cost of reaching a jammed state depends only weakly on polydispersity. The method reaches size ratios up to 5&times;10<sup>5</sup> and several million particles, with the densest packings near &phi;&nbsp;&asymp;&nbsp;0.87.</p>
+    <a class="prt-link" href="/projects/rcp-extreme-size-ratios.html">Details →</a>
+  </div>
+</div>
+
+<div class="prt-card">
   <div class="prt-img"><img src="projects/images/rcpalgorithmmov2.gif" alt="Animation of RCP algorithm evolving"/></div>
   <div class="prt-body">
     <p class="prt-title">Random Close Packing Algorithm</p>
@@ -481,6 +490,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 <li><a href="/projects/granular-flow.html">Penetration of an Object into Granular Media</a></li>
 <li><a href="/projects/jamming-of-rods.html">Jamming of Three-Dimensional Prolate Granular Materials</a></li>
 <li><a href="/projects/granular-rheology.html">Rheology of Fluidized Granular Matter</a></li>
+<li><a href="/projects/rcp-extreme-size-ratios.html">Random Close Packing at Extreme Size Ratios</a></li>
 <li><a href="/projects/rcp-algorithm.html">Random Close Packing Algorithm</a></li>
 <li><a href="/projects/confined-rcp.html">Random Close Packing in Confined Geometries</a></li>
 <li><a href="/projects/rcp-polydispersity.html">Influence of Particle Size Distribution on RCP</a></li>
@@ -494,7 +504,7 @@ A MATLAB-based 2D deformable-polygon model for “squishy” particles. Includes
 
 </div>
 
-*Last updated: 2026-03-17*  
+*Last updated: 2026-08-13*  
 
 
 

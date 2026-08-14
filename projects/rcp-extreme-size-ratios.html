@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Close Packing at Extreme Size Ratios — Kenneth Desmond</title>
+  <meta name="description" content="An Adam-based inflation protocol for generating random close packings of broadly polydisperse spheres, reaching size ratios up to 5x10^5 and several million particles."/>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+           line-height: 1.6; color: #24292e; max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.5rem; }
+    h2 { margin-top: 2rem; }
+    .badge { display: inline-block; background: #6f42c1; color: white; font-size: 0.75rem;
+             padding: 0.2rem 0.6rem; border-radius: 3px; margin-bottom: 1rem; }
+    .back-link { display: inline-block; margin-bottom: 1.5rem; color: #0366d6; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    .pub-link { color: #0366d6; }
+    .lede { font-size: 0.9rem; color: #586069; border-left: 3px solid #e1e4e8;
+            padding: 0.15rem 0 0.15rem 0.9rem; margin: 0 0 1.75rem; }
+    .img-center { text-align: center; margin: 1.75rem 0; }
+    .img-center img { max-width: 100%; border: 1px solid #eaecef; border-radius: 4px; }
+    .img-center p { font-size: 0.85rem; color: #586069; margin-top: 0.5rem;
+                    text-align: left; line-height: 1.5; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 1rem 0 0.5rem; }
+    th { background: #f6f8fa; border: 1px solid #d0d7de; padding: 0.45rem 0.7rem; text-align: right; }
+    th:first-child { text-align: left; }
+    td { border: 1px solid #d0d7de; padding: 0.45rem 0.7rem; text-align: right; }
+    td:first-child { text-align: left; }
+    tr:nth-child(even) td { background: #f9f9fb; }
+    .tnote { font-size: 0.8rem; color: #586069; margin-top: 0.35rem; }
+    .links-block { background: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 6px;
+                   padding: 1rem 1.25rem; margin: 1.25rem 0; }
+    .links-block ul { margin: 0.5rem 0 0; padding-left: 1.2rem; }
+    .links-block li { margin-bottom: 0.4rem; font-size: 0.9rem; }
+    .links-block a { color: #0366d6; }
+    .citation { font-size: 0.875rem; background: #f6f8fa; border-left: 3px solid #6f42c1;
+                padding: 0.7rem 1rem; margin: 1rem 0; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<a class="back-link" href="../">← Back to Home</a>
+
+<span class="badge">Packing</span>
+
+<h1>Random Close Packing at Extreme Size Ratios</h1>
+
+<p class="lede">
+  This page is a short overview of the project and its motivation. The full treatment — methodology,
+  extrapolation procedures, and the complete comparison against theory and prior simulation — is given
+  in the paper linked at the bottom.
+</p>
+
+<h2>The Problem</h2>
+<p>
+  Real particulate systems are almost never monodisperse. Granular media, powders, sediments, and
+  colloids routinely carry size distributions spanning ratios of tens to thousands, and in each case
+  the packing density largely governs the mechanical and transport properties of the material. Broad
+  polydispersity is therefore physically commonplace — and simultaneously among the hardest regimes
+  to generate numerically.
+</p>
+
+<h2>Why Conventional Inflation Stalls</h2>
+<p>
+  The Clarke–Wiley inflation protocol, as adapted in earlier work on
+  <a class="pub-link" href="confined-rcp.html">confined packings</a> and
+  <a class="pub-link" href="rcp-polydispersity.html">polydisperse packings</a>, generates dense
+  disordered configurations by inflating particles from a dilute starting state while relaxing the
+  resulting overlaps. In the usual implementation every particle coordinate is advanced with a single,
+  global step size. As the ratio of largest to smallest diameter
+  <em>S</em>&thinsp;&equiv;&thinsp;<em>D</em><sub>max</sub>/<em>D</em><sub>min</sub> increases, that
+  step must shrink: the contact network comes to contain widely separated force and curvature scales,
+  and the minimization becomes increasingly ill-conditioned. The practical consequence is that most
+  numerical work has remained at size ratios of order ten to a hundred.
+</p>
+
+<h2>An Adam-Based Protocol</h2>
+<p>
+  This project replaces the single global step with the Adam optimizer, which assigns each coordinate
+  its own adaptive step size derived from recent gradient statistics — without Hessian information or
+  line searches, and at essentially the per-iteration cost of a conventional force evaluation and
+  position update. Because coordinates adapt independently, the number of updates needed to reach the
+  stopping criterion depends only weakly on <em>S</em>. The method is implemented in
+  <code>rcpgenerator</code>, which accepts an arbitrary prescribed list of particle diameters, a
+  spatial dimension, and a boundary geometry; each coordinate direction may be periodic or bounded by
+  a flat or curved hard wall, allowing rectilinear, circular, cylindrical, and spherical domains
+  within the same formulation.
+</p>
+
+<div class="img-center">
+  <img src="images/3D_PowerLaw_p3.63_S100_web.jpg" alt="Two-dimensional slice through a three-dimensional random close packing with a power-law size distribution at the Andreasen exponent, particles colored by diameter"/>
+  <p>
+    A planar slice through a three-dimensional packing generated with a truncated power-law size
+    distribution at the Andreasen exponent <em>p</em>&thinsp;&asymp;&thinsp;&minus;3.63 and size ratio
+    <em>S</em>&thinsp;=&thinsp;100 (<em>N</em>&thinsp;&asymp;&thinsp;5.6&times;10<sup>5</sup>,
+    &phi;&thinsp;&asymp;&thinsp;0.86), with each cut sphere colored by its three-dimensional diameter.
+    This distribution is the classical <em>optimal grading</em>, in which each size class fills the
+    voids left by the next-larger one. The packing is densely filled across every size class — but the
+    regions of open pore space still visible between the coarse grains are equally part of the result:
+    they mark room for further densification that this protocol does not reach.
+  </p>
+</div>
+
+<h2>Scale and Compute Time</h2>
+<p>
+  The table below lists representative packings drawn from a truncated-lognormal family, where the
+  width parameter &alpha; sets the polydispersity and thereby the realized size ratio. It is included
+  to indicate the computational scale the method sustains rather than as a benchmark against other
+  solvers.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>&alpha;</th>
+      <th><em>S</em></th>
+      <th><em>N</em></th>
+      <th>&phi;</th>
+      <th>compute time (min)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>0.10</td><td>3</td><td>2,000</td><td>0.641</td><td>0.0</td></tr>
+    <tr><td>0.50</td><td>116</td><td>2,000</td><td>0.698</td><td>0.1</td></tr>
+    <tr><td>0.70</td><td>773</td><td>8,784</td><td>0.735</td><td>0.2</td></tr>
+    <tr><td>0.90</td><td>5,167</td><td>75,966</td><td>0.772</td><td>2.9</td></tr>
+    <tr><td>1.00</td><td>13,360</td><td>195,929</td><td>0.788</td><td>12.8</td></tr>
+    <tr><td>1.10</td><td>34,544</td><td>413,799</td><td>0.799</td><td>35.9</td></tr>
+    <tr><td>1.25</td><td>143,631</td><td>883,556</td><td>0.809</td><td>98.3</td></tr>
+    <tr><td>1.30</td><td>230,960</td><td>1,049,699</td><td>0.813</td><td>124.2</td></tr>
+  </tbody>
+</table>
+<p class="tnote">
+  Times are for one packing using 14 CPU cores. <em>S</em> is the realized ratio of largest to
+  smallest diameter, <em>N</em> the particle number, and &phi; the solid-volume packing fraction.
+</p>
+
+<p>
+  In a controlled single-threaded benchmark spanning
+  <em>N</em>&thinsp;=&thinsp;5&times;10<sup>3</sup> to 1.6&times;10<sup>5</sup>, the measured
+  generation time scales as <em>t</em>(<em>N</em>)&thinsp;&prop;&thinsp;<em>N</em><sup>1.34</sup>,
+  corresponding to roughly a 2.5-fold increase in compute time each time <em>N</em> is doubled. Across
+  the full study the reach extends to size ratios of
+  <em>S</em>&thinsp;~&thinsp;5&times;10<sup>5</sup> for the lognormal family and particle numbers up
+  to <em>N</em>&thinsp;&asymp;&thinsp;5.6&times;10<sup>6</sup> for the power law, with the densest
+  packings reaching &phi;&thinsp;&asymp;&thinsp;0.87. In aggregate the work comprises 1166 independent
+  random close packings and more than 3.5&times;10<sup>8</sup> packed spheres, 128 of them containing
+  over one million particles.
+</p>
+
+<h2>What Was Checked</h2>
+<p>
+  The generator was run across three continuous distribution families — truncated lognormal, truncated
+  power law, and Weibull — and compared against the parameter-free Farr–Groot prediction and, where
+  available, published molecular-dynamics and discrete-element simulations. In every case the measured
+  packing fractions reproduce the distribution-controlled <em>shape</em> of the prediction, including
+  the locations of peaks and knees and the trends with distribution width and size ratio, while
+  differing systematically in magnitude by roughly 0.005–0.01. Separately, applying the method to mimic
+  a staged multimodal packing protocol reproduces the densities measured in McGeary's vibrated-bed
+  experiments, rising class by class through the grading and remaining slightly below the experimental
+  values at each rung.
+</p>
+
+<h2>Scope and Limits</h2>
+<p>
+  Random close packing is protocol-dependent, and the packing fractions reported here are those of one
+  inflation protocol; no claim is made to a protocol-independent or maximally jammed value. The
+  configurations are made strictly non-overlapping, but they are not strictly or collectively jammed.
+  The Farr–Groot comparison serves throughout as a yardstick — it is independent of the generator, but
+  is itself an approximation, so departures are reported as results rather than as verdicts on the
+  theory. Nor is the density obtained here a ceiling: the packings sit slightly below the
+  molecular-dynamics references and, as the figure above shows, leave clearly unfilled voids.
+  Additional routes using Adam or similar per-step adaptive methods may yet reach denser packings at
+  little additional compute cost.
+</p>
+
+<h2>Paper, Code and Data</h2>
+
+<p class="citation">
+  K. Desmond. <em>Random close packing at extreme size ratios with an Adam-based inflation protocol.</em>
+  arXiv:2608.12235 (2026).
+</p>
+
+<div class="links-block">
+  <ul>
+    <li><a href="https://arxiv.org/abs/2608.12235">Paper — arXiv:2608.12235</a></li>
+    <li><a href="https://doi.org/10.5281/zenodo.21435447">Zenodo archive</a> — frozen snapshot of the
+      code and scripts, together with the complete per-case census of distribution parameters and
+      resulting packing fractions behind every figure in the paper</li>
+    <li><a href="https://github.com/KD-physics/RCPGenerator">RCPGenerator repository on GitHub</a> —
+      the maintained code</li>
+    <li><a href="https://colab.research.google.com/github/KD-physics/RCPGenerator/blob/main/getting_started.ipynb">Getting-started notebook in Colab</a></li>
+    <li><a href="../notes/packing-spheres-python.html">Densely Packing Spheres in Python</a> — practical
+      guide to using the code</li>
+    <li><a href="confined-rcp.html">Random Close Packing in Confined Geometries</a></li>
+    <li><a href="rcp-polydispersity.html">Influence of Particle Size Distribution on RCP</a></li>
+  </ul>
+</div>
+
+<hr/>
+<a class="back-link" href="../">← Back to Home</a>
+
+</body>
+</html>
